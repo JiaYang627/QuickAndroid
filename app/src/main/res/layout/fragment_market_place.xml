@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/include_title_bar_layout"
+        style="@style/TitleBarStyleForCons"
+        layout="@layout/common_title_bar_layout" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/market_top_add_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/layoutSize40"
+                android:layout_marginTop="@dimen/layoutSize60"
+                android:layout_marginRight="@dimen/layoutSize40"
+                android:background="@drawable/bg_button_blue_selector"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/layoutSize60"
+                    android:layout_height="@dimen/layoutSize60"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/layoutSize10"
+                    android:layout_toStartOf="@+id/market_top_add_text"
+                    android:src="@drawable/icon_add" />
+
+                <TextView
+                    android:id="@+id/market_top_add_text"
+                    style="@style/TextBoldStyle"
+                    android:layout_centerHorizontal="true"
+                    android:drawablePadding="@dimen/layoutSize10"
+                    android:gravity="center_vertical"
+                    android:paddingTop="@dimen/layoutSize30"
+                    android:paddingBottom="@dimen/layoutSize30"
+                    android:text="Add request"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textSize42" />
+
+            </RelativeLayout>
+
+
+            <com.jiayang.quickandroid.widget.lshadowlayout.ShadowConstraintLayout
+                android:id="@+id/market_top_search_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/layoutSize40"
+                android:layout_marginTop="@dimen/layoutSize25"
+                android:layout_marginRight="@dimen/layoutSize40"
+                android:layout_marginBottom="@dimen/layoutSize15"
+                android:background="@color/white"
+                app:l_radius="@dimen/layoutSize60"
+                app:l_shadowAlpha="0.8"
+                app:l_shadowElevation="@dimen/layoutSize7">
+
+                <TextView
+                    style="@style/TextRegularStyle"
+                    android:layout_marginLeft="@dimen/layoutSize60"
+                    android:text="Search currency"
+                    android:textColor="@color/grey_3f"
+                    android:textSize="@dimen/textSize42"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:layout_width="@dimen/layoutSize58"
+                    android:layout_height="@dimen/layoutSize63"
+                    android:layout_marginTop="@dimen/layoutSize30"
+                    android:layout_marginRight="@dimen/layoutSize60"
+                    android:layout_marginBottom="@dimen/layoutSize30"
+                    android:src="@drawable/icon_search_gold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </com.jiayang.quickandroid.widget.lshadowlayout.ShadowConstraintLayout>
+
+            <com.iappsasia.industry_android.widget.recyclerview.QuickRecyclerView
+                android:id="@+id/market_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/layoutSize45"
+                android:paddingBottom="@dimen/layoutSize30" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>

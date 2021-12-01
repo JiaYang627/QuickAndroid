@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/include_title_bar_layout"
+        style="@style/TitleBarStyleForCons"
+        layout="@layout/common_title_bar_layout" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include
+                android:id="@+id/include_currency_top_layout"
+                layout="@layout/currency_rates_top_layout" />
+
+            <com.iappsasia.industry_android.widget.recyclerview.QuickRecyclerView
+                android:layout_marginTop="@dimen/layoutSize40"
+                android:paddingBottom="@dimen/layoutSize20"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/currency_recycler_view"
+                />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>

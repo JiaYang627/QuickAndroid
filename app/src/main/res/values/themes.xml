@@ -1,0 +1,297 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.QuickAndroid" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="android:overScrollMode">never</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:windowAnimationStyle">@style/ActivityAnimation</item>
+        <item name="android:clipToPadding" >false</item>
+    </style>
+
+    <style name="TextRegularStyle">
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="TextBoldStyle">
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="fontFamily">@font/poppins_bold</item>
+    </style>
+
+    <style name="TextMediumStyle">
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="fontFamily">@font/poppins_medium</item>
+    </style>
+
+    <style name="TitleBarStyleForCons">
+        <item name="layout_constraintLeft_toLeftOf">parent</item>
+        <item name="layout_constraintTop_toTopOf">parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/layoutSize130</item>
+    </style>
+    <style name="HorLineView">
+        <item name="android:layout_height">@dimen/layoutSize5</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="ActivityAnimation">
+        <item name="android:activityOpenEnterAnimation">@anim/in</item>
+        <item name="android:activityOpenExitAnimation">@anim/out</item>
+        <item name="android:activityCloseEnterAnimation">@anim/in</item>
+        <item name="android:activityCloseExitAnimation">@anim/out</item>
+    </style>
+
+    <style name="SplashTheme" parent="Theme.QuickAndroid">
+        <item name="android:windowBackground">@drawable/splash</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+     <attr name="l_bottomDividerHeight" format="dimension" />
+    <attr name="l_bottomDividerColor" format="color|reference" />
+    <attr name="l_bottomDividerInsetLeft" format="dimension" />
+    <attr name="l_bottomDividerInsetRight" format="dimension" />
+    <attr name="l_topDividerHeight" format="dimension" />
+    <attr name="l_topDividerColor" format="color|reference" />
+    <attr name="l_topDividerInsetLeft" format="dimension" />
+    <attr name="l_topDividerInsetRight" format="dimension" />
+    <attr name="l_leftDividerWidth" format="dimension" />
+    <attr name="l_leftDividerColor" format="color|reference" />
+    <attr name="l_leftDividerInsetTop" format="dimension" />
+    <attr name="l_leftDividerInsetBottom" format="dimension" />
+    <attr name="l_rightDividerWidth" format="dimension" />
+    <attr name="l_rightDividerColor" format="color|reference" />
+    <attr name="l_rightDividerInsetTop" format="dimension" />
+    <attr name="l_rightDividerInsetBottom" format="dimension" />
+    <attr name="l_radius" format="dimension" />
+    <attr name="l_borderColor" format="color" />
+    <attr name="l_borderWidth" format="dimension" />
+    <attr name="l_outerNormalColor" format="color|reference" />
+    <attr name="l_hideRadiusSide" format="enum">
+        <enum name="none" value="0" />
+        <enum name="top" value="1" />
+        <enum name="right" value="2" />
+        <enum name="bottom" value="3" />
+        <enum name="left" value="4" />
+    </attr>
+    <attr name="l_showBorderOnlyBeforeL" format="boolean" />
+    <attr name="l_shadowElevation" format="dimension" />
+    <!--<attr name="l_useThemeGeneralShadowElevation" format="boolean"/>-->
+    <attr name="l_shadowAlpha" format="float" />
+    <attr name="l_outlineInsetTop" format="dimension" />
+    <attr name="l_outlineInsetLeft" format="dimension" />
+    <attr name="l_outlineInsetRight" format="dimension" />
+    <attr name="l_outlineInsetBottom" format="dimension" />
+    <attr name="l_outlineExcludePadding" format="boolean" />
+
+    <declare-styleable name="ShadowLayout">
+        <attr name="android:maxWidth" />
+        <attr name="android:maxHeight" />
+        <attr name="android:minWidth" />
+        <attr name="android:minHeight" />
+        <attr name="l_bottomDividerHeight" />
+        <attr name="l_bottomDividerColor" />
+        <attr name="l_bottomDividerInsetLeft" />
+        <attr name="l_bottomDividerInsetRight" />
+        <attr name="l_topDividerHeight" />
+        <attr name="l_topDividerColor" />
+        <attr name="l_topDividerInsetLeft" />
+        <attr name="l_topDividerInsetRight" />
+        <attr name="l_leftDividerWidth" />
+        <attr name="l_leftDividerColor" />
+        <attr name="l_leftDividerInsetTop" />
+        <attr name="l_leftDividerInsetBottom" />
+        <attr name="l_rightDividerWidth" />
+        <attr name="l_rightDividerColor" />
+        <attr name="l_rightDividerInsetTop" />
+        <attr name="l_rightDividerInsetBottom" />
+        <attr name="l_radius" />
+        <attr name="l_borderColor" />
+        <attr name="l_borderWidth" />
+        <attr name="l_outerNormalColor" />
+        <attr name="l_hideRadiusSide" />
+        <attr name="l_showBorderOnlyBeforeL" />
+        <attr name="l_shadowElevation" />
+        <!--<attr name="l_useThemeGeneralShadowElevation" format="boolean"/>-->
+        <attr name="l_shadowAlpha" />
+        <attr name="l_outlineInsetTop" />
+        <attr name="l_outlineInsetLeft" />
+        <attr name="l_outlineInsetRight" />
+        <attr name="l_outlineInsetBottom" />
+        <attr name="l_outlineExcludePadding" />
+    </declare-styleable>
+
+    <declare-styleable name="ShadowLinearLayout">
+        <attr name="android:maxWidth" />
+        <attr name="android:maxHeight" />
+        <attr name="android:minWidth" />
+        <attr name="android:minHeight" />
+        <attr name="l_bottomDividerHeight" />
+        <attr name="l_bottomDividerColor" />
+        <attr name="l_bottomDividerInsetLeft" />
+        <attr name="l_bottomDividerInsetRight" />
+        <attr name="l_topDividerHeight" />
+        <attr name="l_topDividerColor" />
+        <attr name="l_topDividerInsetLeft" />
+        <attr name="l_topDividerInsetRight" />
+        <attr name="l_leftDividerWidth" />
+        <attr name="l_leftDividerColor" />
+        <attr name="l_leftDividerInsetTop" />
+        <attr name="l_leftDividerInsetBottom" />
+        <attr name="l_rightDividerWidth" />
+        <attr name="l_rightDividerColor" />
+        <attr name="l_rightDividerInsetTop" />
+        <attr name="l_rightDividerInsetBottom" />
+        <attr name="l_radius" />
+        <attr name="l_borderColor" />
+        <attr name="l_borderWidth" />
+        <attr name="l_outerNormalColor" />
+        <attr name="l_hideRadiusSide" />
+        <attr name="l_showBorderOnlyBeforeL" />
+        <attr name="l_shadowElevation" />
+        <!--<attr name="l_useThemeGeneralShadowElevation" format="boolean"/>-->
+        <attr name="l_shadowAlpha" />
+        <attr name="l_outlineInsetTop" />
+        <attr name="l_outlineInsetLeft" />
+        <attr name="l_outlineInsetRight" />
+        <attr name="l_outlineInsetBottom" />
+        <attr name="l_outlineExcludePadding" />
+
+    </declare-styleable>
+
+    <declare-styleable name="ShadowRelativeLayout">
+        <attr name="android:maxWidth" />
+        <attr name="android:maxHeight" />
+        <attr name="android:minWidth" />
+        <attr name="android:minHeight" />
+        <attr name="l_bottomDividerHeight" />
+        <attr name="l_bottomDividerColor" />
+        <attr name="l_bottomDividerInsetLeft" />
+        <attr name="l_bottomDividerInsetRight" />
+        <attr name="l_topDividerHeight" />
+        <attr name="l_topDividerColor" />
+        <attr name="l_topDividerInsetLeft" />
+        <attr name="l_topDividerInsetRight" />
+        <attr name="l_leftDividerWidth" />
+        <attr name="l_leftDividerColor" />
+        <attr name="l_leftDividerInsetTop" />
+        <attr name="l_leftDividerInsetBottom" />
+        <attr name="l_rightDividerWidth" />
+        <attr name="l_rightDividerColor" />
+        <attr name="l_rightDividerInsetTop" />
+        <attr name="l_rightDividerInsetBottom" />
+        <attr name="l_radius" />
+        <attr name="l_borderColor" />
+        <attr name="l_borderWidth" />
+        <attr name="l_outerNormalColor" />
+        <attr name="l_hideRadiusSide" />
+        <attr name="l_showBorderOnlyBeforeL" />
+        <attr name="l_shadowElevation" />
+        <attr name="l_shadowAlpha" />
+        <attr name="l_outlineInsetTop" />
+        <attr name="l_outlineInsetLeft" />
+        <attr name="l_outlineInsetRight" />
+        <attr name="l_outlineInsetBottom" />
+        <attr name="l_outlineExcludePadding" />
+    </declare-styleable>
+
+    <declare-styleable name="ShadowConstraintLayout">
+        <attr name="android:maxWidth" />
+        <attr name="android:maxHeight" />
+        <attr name="android:minWidth" />
+        <attr name="android:minHeight" />
+        <attr name="l_bottomDividerHeight" />
+        <attr name="l_bottomDividerColor" />
+        <attr name="l_bottomDividerInsetLeft" />
+        <attr name="l_bottomDividerInsetRight" />
+        <attr name="l_topDividerHeight" />
+        <attr name="l_topDividerColor" />
+        <attr name="l_topDividerInsetLeft" />
+        <attr name="l_topDividerInsetRight" />
+        <attr name="l_leftDividerWidth" />
+        <attr name="l_leftDividerColor" />
+        <attr name="l_leftDividerInsetTop" />
+        <attr name="l_leftDividerInsetBottom" />
+        <attr name="l_rightDividerWidth" />
+        <attr name="l_rightDividerColor" />
+        <attr name="l_rightDividerInsetTop" />
+        <attr name="l_rightDividerInsetBottom" />
+        <attr name="l_radius" />
+        <attr name="l_borderColor" />
+        <attr name="l_borderWidth" />
+        <attr name="l_outerNormalColor" />
+        <attr name="l_hideRadiusSide" />
+        <attr name="l_showBorderOnlyBeforeL" />
+        <attr name="l_shadowElevation" />
+        <attr name="l_shadowAlpha" />
+        <attr name="l_outlineInsetTop" />
+        <attr name="l_outlineInsetLeft" />
+        <attr name="l_outlineInsetRight" />
+        <attr name="l_outlineInsetBottom" />
+        <attr name="l_outlineExcludePadding" />
+    </declare-styleable>
+
+    <declare-styleable name="ShadowFrameLayout">
+        <attr name="android:maxWidth" />
+        <attr name="android:maxHeight" />
+        <attr name="android:minWidth" />
+        <attr name="android:minHeight" />
+        <attr name="l_bottomDividerHeight" />
+        <attr name="l_bottomDividerColor" />
+        <attr name="l_bottomDividerInsetLeft" />
+        <attr name="l_bottomDividerInsetRight" />
+        <attr name="l_topDividerHeight" />
+        <attr name="l_topDividerColor" />
+        <attr name="l_topDividerInsetLeft" />
+        <attr name="l_topDividerInsetRight" />
+        <attr name="l_leftDividerWidth" />
+        <attr name="l_leftDividerColor" />
+        <attr name="l_leftDividerInsetTop" />
+        <attr name="l_leftDividerInsetBottom" />
+        <attr name="l_rightDividerWidth" />
+        <attr name="l_rightDividerColor" />
+        <attr name="l_rightDividerInsetTop" />
+        <attr name="l_rightDividerInsetBottom" />
+        <attr name="l_radius" />
+        <attr name="l_borderColor" />
+        <attr name="l_borderWidth" />
+        <attr name="l_outerNormalColor" />
+        <attr name="l_hideRadiusSide" />
+        <attr name="l_showBorderOnlyBeforeL" />
+        <attr name="l_shadowElevation" />
+        <attr name="l_shadowAlpha" />
+        <attr name="l_outlineInsetTop" />
+        <attr name="l_outlineInsetLeft" />
+        <attr name="l_outlineInsetRight" />
+        <attr name="l_outlineInsetBottom" />
+        <attr name="l_outlineExcludePadding" />
+    </declare-styleable>
+
+
+    <style name="LDialogStyle" parent="@style/Theme.AppCompat.Light.Dialog">
+        <!-- 背景透明 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- 浮于Activity之上 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- 无标题 -->
+        <item name="android:windowNoTitle">true</item>
+    </style>
+</resources>

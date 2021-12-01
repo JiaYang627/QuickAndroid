@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jiayang.quickandroid.widget.lshadowlayout.ShadowConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/layoutSize60"
+    android:layout_marginTop="@dimen/layoutSize20"
+    android:layout_marginRight="@dimen/layoutSize60"
+    android:layout_marginBottom="@dimen/layoutSize20"
+    android:background="@color/white"
+    android:paddingLeft="@dimen/layoutSize60"
+    android:paddingTop="@dimen/layoutSize50"
+    android:paddingRight="@dimen/layoutSize60"
+    android:paddingBottom="@dimen/layoutSize50"
+    app:l_radius="@dimen/layoutSize26"
+    app:l_shadowAlpha="0.8"
+    app:l_shadowElevation="@dimen/layoutSize7">
+
+
+    <TextView
+        android:id="@+id/item_currency_left_text"
+        style="@style/TextRegularStyle"
+        android:layout_width="0dp"
+        app:layout_constraintRight_toLeftOf="@+id/item_currency_middle_text"
+        android:ellipsize="end"
+        android:text="SGD> \nMohamed Yoonu.."
+        android:textColor="@color/black"
+        android:textSize="@dimen/textSize31"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/item_currency_right_arrow"
+        android:layout_width="@dimen/layoutSize18"
+        android:layout_height="@dimen/layoutSize34"
+        android:src="@drawable/icon_arrow_right"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/item_currency_distance_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/layoutSize50"
+        android:orientation="horizontal"
+        app:layout_constraintRight_toLeftOf="@+id/item_currency_right_arrow"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="@dimen/layoutSize26"
+            android:layout_height="@dimen/layoutSize37"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/layoutSize10"
+            android:src="@drawable/icon_gps_gold" />
+
+        <TextView
+            android:id="@+id/item_currency_distance_text"
+            style="@style/TextRegularStyle"
+            android:text="1.2km"
+            android:textColor="@color/common_gold"
+            android:textSize="@dimen/textSize42" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/item_currency_middle_text"
+        style="@style/TextRegularStyle"
+        android:layout_marginRight="@dimen/layoutSize50"
+        android:text="1 SGD =\n0.40021 USD"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textSize42"
+        app:layout_constraintRight_toLeftOf="@+id/item_currency_distance_layout"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</com.jiayang.quickandroid.widget.lshadowlayout.ShadowConstraintLayout>

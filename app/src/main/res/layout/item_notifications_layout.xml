@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jiayang.quickandroid.widget.lshadowlayout.ShadowConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:l_radius="@dimen/layoutSize26"
+    app:l_shadowAlpha="0.8"
+    app:l_shadowElevation="@dimen/layoutSize7"
+    android:background="@color/white"
+    android:layout_marginLeft="@dimen/layoutSize40"
+    android:layout_marginRight="@dimen/layoutSize40"
+    android:layout_marginBottom="@dimen/layoutSize60"
+    android:paddingLeft="@dimen/layoutSize50"
+    android:paddingTop="@dimen/layoutSize40"
+    android:paddingRight="@dimen/layoutSize50"
+    android:paddingBottom="@dimen/layoutSize40">
+
+    <TextView
+        android:id="@+id/item_notification_offer_text"
+        style="@style/TextRegularStyle"
+        android:text="Offer Received: SGD > USD "
+        android:textColor="@color/grey_4a"
+        android:textSize="@dimen/textSize55" />
+
+    <TextView
+        android:id="@+id/item_notification_middle_text"
+        style="@style/TextRegularStyle"
+        android:layout_marginTop="@dimen/layoutSize21"
+        android:text="X MoneyChanger"
+        android:textColor="@color/grey_4a"
+        android:textSize="@dimen/textSize31"
+        app:layout_constraintTop_toBottomOf="@+id/item_notification_offer_text" />
+
+    <TextView
+        android:layout_marginTop="@dimen/layoutSize18"
+        android:textSize="@dimen/textSize42"
+        android:textColor="@color/grey_4a"
+        android:text="1 SGD = 0.743111 USD"
+        android:id="@+id/item_notification_bottom_text"
+        style="@style/TextRegularStyle"
+        app:layout_constraintTop_toBottomOf="@+id/item_notification_middle_text" />
+
+    <ImageView
+        android:id="@+id/item_notification_right_dots_img"
+        android:src="@drawable/icon_dots_blue"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="@dimen/layoutSize44"
+        android:layout_height="@dimen/layoutSize44" />
+
+
+</com.jiayang.quickandroid.widget.lshadowlayout.ShadowConstraintLayout>

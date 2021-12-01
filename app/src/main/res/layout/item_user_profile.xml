@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jiayang.quickandroid.widget.lshadowlayout.ShadowConstraintLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/layoutSize60"
+    android:layout_marginTop="@dimen/layoutSize30"
+    android:layout_marginRight="@dimen/layoutSize60"
+    android:layout_marginBottom="@dimen/layoutSize30"
+    android:background="@color/white"
+    android:paddingLeft="@dimen/layoutSize60"
+    android:paddingTop="@dimen/layoutSize50"
+    android:paddingRight="@dimen/layoutSize60"
+    android:paddingBottom="@dimen/layoutSize50"
+    app:l_radius="@dimen/layoutSize26"
+    app:l_shadowAlpha="0.8"
+    app:l_shadowElevation="@dimen/layoutSize7">
+
+
+    <TextView
+        android:id="@+id/item_money_name"
+        style="@style/TextRegularStyle"
+        android:text="USD"
+        android:textColor="@color/grey_4a"
+        android:textSize="@dimen/textSize55"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="@dimen/layoutSize0"
+        android:layout_height="@dimen/layoutSize0"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <TextView
+        android:id="@+id/item_buy_rate"
+        style="@style/TextRegularStyle"
+        android:text="Buy rate:"
+        android:textColor="@color/grey_4a"
+        android:textSize="@dimen/textSize42"
+        app:layout_constraintLeft_toRightOf="@+id/item_money_name"
+        app:layout_constraintRight_toRightOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/item_buy_rate_img"
+        android:layout_width="@dimen/layoutSize40"
+        android:layout_height="@dimen/layoutSize35"
+        android:src="@drawable/icon_cart"
+        app:layout_constraintBottom_toBottomOf="@+id/item_buy_rate_num_text"
+        app:layout_constraintLeft_toLeftOf="@+id/item_buy_rate"
+        app:layout_constraintTop_toTopOf="@+id/item_buy_rate_num_text" />
+
+    <TextView
+        android:id="@+id/item_buy_rate_num_text"
+        style="@style/TextRegularStyle"
+        android:layout_marginLeft="@dimen/layoutSize30"
+        android:layout_marginTop="@dimen/layoutSize20"
+        android:text="1.4272"
+        android:textColor="@color/common_blue"
+        android:textSize="@dimen/textSize42"
+        app:layout_constraintLeft_toRightOf="@+id/item_buy_rate_img"
+        app:layout_constraintTop_toBottomOf="@+id/item_buy_rate" />
+
+    <TextView
+        android:id="@+id/item_sell_rate"
+        style="@style/TextRegularStyle"
+        android:text="Selling rate:"
+        android:textColor="@color/grey_4a"
+        android:textSize="@dimen/textSize42"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline"
+        app:layout_constraintRight_toLeftOf="@+id/item_right_arrow"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/item_right_arrow"
+        android:layout_width="@dimen/layoutSize18"
+        android:layout_height="@dimen/layoutSize34"
+        android:src="@drawable/icon_arrow_right"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/item_sell_rate_img"
+        android:layout_width="@dimen/layoutSize40"
+        android:layout_height="@dimen/layoutSize40"
+        android:src="@drawable/icon_selling_rate"
+        app:layout_constraintBottom_toBottomOf="@+id/item_sell_rate_num_text"
+        app:layout_constraintLeft_toLeftOf="@+id/item_sell_rate"
+        app:layout_constraintTop_toTopOf="@+id/item_sell_rate_num_text" />
+
+    <TextView
+        android:id="@+id/item_sell_rate_num_text"
+        style="@style/TextRegularStyle"
+        android:layout_marginLeft="@dimen/layoutSize30"
+        android:layout_marginTop="@dimen/layoutSize20"
+        android:text="1.4272"
+        android:textColor="@color/common_green"
+        android:textSize="@dimen/textSize42"
+        app:layout_constraintLeft_toRightOf="@+id/item_sell_rate_img"
+        app:layout_constraintTop_toBottomOf="@+id/item_sell_rate" />
+
+
+</com.jiayang.quickandroid.widget.lshadowlayout.ShadowConstraintLayout>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jiayang.quickandroid.widget.lshadowlayout.ShadowLinearLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    app:l_radius="@dimen/layoutSize26">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/layoutSize80"
+        android:text="Select type of outlet:"
+        android:textColor="@color/grey_3f"
+        android:textSize="@dimen/textSize55" />
+
+    <com.jiayang.quickandroid.widget.lshadowlayout.ShadowConstraintLayout
+        android:id="@+id/store_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/layoutSize60"
+        android:layout_marginTop="@dimen/layoutSize90"
+        android:layout_marginRight="@dimen/layoutSize60"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/layoutSize50"
+        android:paddingTop="@dimen/layoutSize40"
+        android:paddingRight="@dimen/layoutSize50"
+        android:paddingBottom="@dimen/layoutSize40"
+        app:l_radius="@dimen/layoutSize26"
+        app:l_shadowAlpha="0.8"
+        app:l_shadowElevation="@dimen/layoutSize7">
+
+        <ImageView
+            android:id="@+id/select_dialog_store_img"
+            android:layout_width="@dimen/layoutSize70"
+            android:layout_height="@dimen/layoutSize73"
+            android:src="@drawable/icon_store_gold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/select_dialog_store_left_text"
+            style="@style/TextRegularStyle"
+            android:layout_marginLeft="@dimen/layoutSize50"
+            android:text="Faizura\nTrading"
+            android:textColor="@color/grey_58"
+            android:textSize="@dimen/textSize31"
+            app:layout_constraintLeft_toRightOf="@+id/select_dialog_store_img"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/select_dialog_store_right_text"
+            style="@style/TextRegularStyle"
+            android:layout_width="@dimen/layoutSize0"
+            android:layout_marginLeft="@dimen/layoutSize70"
+            android:text="Located at: Clementi \nMall #01-01/02"
+            android:textColor="@color/grey_58"
+            android:textSize="@dimen/textSize31"
+            app:layout_constraintLeft_toRightOf="@+id/select_dialog_store_left_text"
+            app:layout_constraintRight_toLeftOf="@+id/select_dialog_store_arrow"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/select_dialog_store_arrow"
+            android:layout_width="@dimen/layoutSize17"
+            android:layout_height="@dimen/layoutSize34"
+            android:src="@drawable/icon_arrow_right"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </com.jiayang.quickandroid.widget.lshadowlayout.ShadowConstraintLayout>
+
+    <com.jiayang.quickandroid.widget.lshadowlayout.ShadowConstraintLayout
+        android:id="@+id/order_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/layoutSize60"
+        android:layout_marginTop="@dimen/layoutSize55"
+        android:layout_marginRight="@dimen/layoutSize60"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/layoutSize50"
+        android:paddingTop="@dimen/layoutSize40"
+        android:paddingRight="@dimen/layoutSize50"
+        android:paddingBottom="@dimen/layoutSize40"
+        app:l_radius="@dimen/layoutSize26"
+        app:l_shadowAlpha="0.8"
+        app:l_shadowElevation="@dimen/layoutSize7">
+
+        <ImageView
+            android:id="@+id/select_dialog_order_img"
+            android:layout_width="@dimen/layoutSize70"
+            android:layout_height="@dimen/layoutSize73"
+            android:src="@drawable/icon_store_gold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/select_dialog_order_left_text"
+            style="@style/TextRegularStyle"
+            android:layout_marginLeft="@dimen/layoutSize50"
+            android:text="Faizura\nTrading"
+            android:textColor="@color/grey_58"
+            android:textSize="@dimen/textSize31"
+            app:layout_constraintLeft_toRightOf="@+id/select_dialog_order_img"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/select_dialog_order_right_text"
+            style="@style/TextRegularStyle"
+            android:layout_width="@dimen/layoutSize0"
+            android:layout_marginLeft="@dimen/layoutSize70"
+            android:text="Online Digital\n Store"
+            android:textColor="@color/grey_58"
+            android:textSize="@dimen/textSize31"
+            app:layout_constraintLeft_toRightOf="@+id/select_dialog_order_left_text"
+            app:layout_constraintRight_toLeftOf="@+id/select_dialog_store_arrow"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/select_dialog_order_arrow"
+            android:layout_width="@dimen/layoutSize17"
+            android:layout_height="@dimen/layoutSize34"
+            android:src="@drawable/icon_arrow_right"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </com.jiayang.quickandroid.widget.lshadowlayout.ShadowConstraintLayout>
+
+
+    <TextView
+        android:id="@+id/select_dialog_close"
+        style="@style/TextBoldStyle"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/layoutSize60"
+        android:layout_marginTop="@dimen/layoutSize95"
+        android:layout_marginRight="@dimen/layoutSize60"
+        android:layout_marginBottom="@dimen/layoutSize100"
+        android:background="@drawable/bg_button_blue_selector"
+        android:gravity="center_horizontal"
+        android:paddingTop="@dimen/layoutSize30"
+        android:paddingBottom="@dimen/layoutSize30"
+        android:text="Close"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textSize42" />
+
+
+</com.jiayang.quickandroid.widget.lshadowlayout.ShadowLinearLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <include
+        android:id="@+id/include_title_bar_layout"
+        style="@style/TitleBarStyleForCons"
+        layout="@layout/common_title_bar_layout" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/watchlist_nested_view"
+        android:layout_width="match_parent"
+        android:layout_height="0pt"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/include_top_layout"
+                layout="@layout/watch_list_top_layout" />
+
+            <com.iappsasia.industry_android.widget.recyclerview.QuickRecyclerView
+                android:id="@+id/watchlist_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/layoutSize30"
+                android:visibility="gone"
+                />
+
+            <RelativeLayout
+                android:id="@+id/watchlist_bottom_add_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/layoutSize40"
+                android:layout_marginTop="@dimen/layoutSize60"
+                android:layout_marginRight="@dimen/layoutSize40"
+                android:layout_marginBottom="@dimen/layoutSize80"
+                android:background="@drawable/bg_button_blue_selector"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/layoutSize60"
+                    android:layout_height="@dimen/layoutSize60"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/layoutSize10"
+                    android:layout_toStartOf="@+id/watchlist_add_text"
+                    android:src="@drawable/icon_add" />
+
+                <TextView
+                    android:id="@+id/watchlist_add_text"
+                    style="@style/TextBoldStyle"
+                    android:layout_centerHorizontal="true"
+                    android:drawablePadding="@dimen/layoutSize10"
+                    android:gravity="center_vertical"
+                    android:paddingTop="@dimen/layoutSize30"
+                    android:paddingBottom="@dimen/layoutSize30"
+                    android:text="Add currency"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textSize42" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>

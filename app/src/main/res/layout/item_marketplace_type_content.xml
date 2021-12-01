@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jiayang.quickandroid.widget.lshadowlayout.ShadowConstraintLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/layoutSize40"
+    android:layout_marginTop="@dimen/layoutSize25"
+    android:layout_marginBottom="@dimen/layoutSize25"
+    android:layout_marginRight="@dimen/layoutSize40"
+    android:background="@color/white"
+    android:paddingLeft="@dimen/layoutSize60"
+    android:paddingTop="@dimen/layoutSize40"
+    android:paddingRight="@dimen/layoutSize60"
+    android:paddingBottom="@dimen/layoutSize40"
+    app:l_radius="@dimen/layoutSize26"
+    app:l_shadowAlpha="0.8"
+    app:l_shadowElevation="@dimen/layoutSize7">
+
+    <ImageView
+        android:id="@+id/item_market_place_left_img_view"
+        android:layout_width="@dimen/layoutSize73"
+        android:layout_height="@dimen/layoutSize76"
+        android:src="@drawable/icon_small"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/item_market_place_left_text_view"
+        style="@style/TextRegularStyle"
+        android:layout_marginLeft="@dimen/layoutSize55"
+        android:text="SGD >\nX MoneyChanger"
+        android:textColor="@color/grey_4a"
+        android:textSize="@dimen/textSize31"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/item_market_place_left_img_view" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/item_right_guide"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.6" />
+
+    <ImageView
+        android:id="@+id/item_market_place_right_dis_img"
+        android:layout_width="@dimen/layoutSize30"
+        android:layout_height="@dimen/layoutSize30"
+        android:src="@drawable/icon_bids"
+        app:layout_constraintBottom_toBottomOf="@+id/item_market_place_right_dis_text_view"
+        app:layout_constraintLeft_toLeftOf="@+id/item_right_guide"
+        app:layout_constraintTop_toTopOf="@+id/item_market_place_right_dis_text_view" />
+
+    <TextView
+        android:id="@+id/item_market_place_right_dis_text_view"
+        style="@style/TextRegularStyle"
+        android:layout_marginLeft="@dimen/layoutSize10"
+        android:text="5 bids"
+        android:textColor="@color/blue_5c"
+        android:textSize="@dimen/textSize42"
+        app:layout_constraintLeft_toRightOf="@+id/item_market_place_right_dis_img"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/item_market_place_right_time_img"
+        android:layout_width="@dimen/layoutSize30"
+        android:layout_height="@dimen/layoutSize30"
+        android:src="@drawable/icon_bids"
+        app:layout_constraintBottom_toBottomOf="@+id/item_market_place_right_time_text_view"
+        app:layout_constraintLeft_toLeftOf="@+id/item_right_guide"
+        app:layout_constraintTop_toTopOf="@+id/item_market_place_right_time_text_view" />
+
+    <TextView
+        android:id="@+id/item_market_place_right_time_text_view"
+        style="@style/TextRegularStyle"
+        android:layout_marginLeft="@dimen/layoutSize10"
+        android:layout_marginTop="@dimen/layoutSize18"
+        android:layout_marginRight="@dimen/layoutSize40"
+        android:text="06:30:00"
+        android:textColor="@color/red_eb"
+        android:textSize="@dimen/textSize42"
+        app:layout_constraintLeft_toRightOf="@+id/item_market_place_right_time_img"
+        app:layout_constraintTop_toBottomOf="@+id/item_market_place_right_dis_text_view" />
+
+
+    <ImageView
+        app:layout_constraintTop_toTopOf="@+id/item_market_place_right_cal_text_view"
+        app:layout_constraintBottom_toBottomOf="@+id/item_market_place_right_cal_text_view"
+        android:src="@drawable/icon_calendar"
+        app:layout_constraintLeft_toLeftOf="@+id/item_right_guide"
+        android:id="@+id/item_market_place_right_cal_img"
+        android:layout_width="@dimen/layoutSize30"
+        android:layout_height="@dimen/layoutSize30" />
+
+    <TextView
+        android:id="@+id/item_market_place_right_cal_text_view"
+        style="@style/TextRegularStyle"
+        android:layout_marginLeft="@dimen/layoutSize10"
+        android:layout_marginTop="@dimen/layoutSize18"
+        android:layout_marginRight="@dimen/layoutSize40"
+        android:text="01/09/2021"
+        android:textColor="@color/common_blue"
+        android:textSize="@dimen/textSize42"
+        app:layout_constraintLeft_toRightOf="@+id/item_market_place_right_cal_img"
+        app:layout_constraintTop_toBottomOf="@+id/item_market_place_right_time_text_view" />
+
+    <ImageView
+        android:id="@+id/item_market_place_right_img"
+        android:layout_width="@dimen/layoutSize18"
+        android:layout_height="@dimen/layoutSize34"
+        android:src="@drawable/icon_arrow_right"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</com.jiayang.quickandroid.widget.lshadowlayout.ShadowConstraintLayout>

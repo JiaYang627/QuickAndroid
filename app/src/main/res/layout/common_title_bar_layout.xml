@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/common_title_bar_root"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/common_blue"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/layoutSize130">
+
+    <ImageView
+        android:id="@+id/title_bar_left_back_img"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:padding="@dimen/layoutSize5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="@dimen/layoutSize40"
+        tools:src="@drawable/icon_back_white"
+        android:layout_width="@dimen/layoutSize60"
+        android:layout_height="@dimen/layoutSize60" />
+
+    <TextView
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:fontFamily="@font/poppins_bold"
+        android:textSize="@dimen/textSize42"
+        android:textColor="@color/white"
+        tools:text="Notification"
+        android:id="@+id/title_bar_center_title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/title_bar_right_bell_img"
+        android:layout_marginEnd="@dimen/layoutSize40"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:src="@drawable/icon_bell_white"
+        android:padding="@dimen/layoutSize5"
+        android:layout_width="@dimen/layoutSize62"
+        android:layout_height="@dimen/layoutSize70" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

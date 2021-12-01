@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/watchlist_top_text_view"
+        style="@style/TextBoldStyle"
+        android:layout_marginLeft="@dimen/layoutSize40"
+        android:layout_marginTop="@dimen/layoutSize40"
+        android:layout_marginRight="@dimen/layoutSize40"
+        android:drawableLeft="@drawable/icon_horn"
+        android:drawablePadding="@dimen/textSize18"
+        android:gravity="center_vertical"
+        android:text="20 people have view your currencies!"
+        android:textColor="@color/black_31"
+        android:textSize="@dimen/textSize42" />
+
+
+    <TextView
+        style="@style/TextBoldStyle"
+        android:layout_marginLeft="@dimen/layoutSize40"
+        android:layout_marginTop="@dimen/layoutSize80"
+        android:layout_marginRight="@dimen/layoutSize40"
+        android:text="Activities of the day:"
+        android:textColor="@color/black_15"
+        android:textSize="@dimen/textSize55" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/layoutSize30"
+        android:orientation="horizontal">
+
+        <com.jiayang.quickandroid.widget.lshadowlayout.ShadowRelativeLayout
+            android:id="@+id/watchlist_top_trans_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/layoutSize40"
+            android:layout_marginTop="@dimen/layoutSize10"
+            android:layout_marginRight="@dimen/layoutSize20"
+            android:layout_marginBottom="@dimen/layoutSize15"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:padding="@dimen/layoutSize40"
+            app:l_radius="@dimen/layoutSize26"
+            app:l_shadowAlpha="0.8"
+            app:l_shadowElevation="@dimen/layoutSize7">
+
+            <ImageView
+                android:layout_width="@dimen/layoutSize52"
+                android:layout_height="@dimen/layoutSize60"
+                android:src="@drawable/icon_small" />
+
+            <TextView
+                android:id="@+id/watchlist_top_trans_num_view"
+                style="@style/TextRegularStyle"
+                android:layout_centerHorizontal="true"
+                android:text="20"
+                android:textColor="@color/black_15"
+                android:textSize="@dimen/textSize55" />
+
+            <TextView
+                style="@style/TextRegularStyle"
+                android:layout_below="@+id/watchlist_top_trans_num_view"
+                android:layout_marginTop="@dimen/layoutSize30"
+                android:ellipsize="middle"
+                android:gravity="center"
+                android:maxLines="2"
+                android:text="transactions made today"
+                android:textColor="@color/black_15"
+                android:textSize="@dimen/textSize42" />
+        </com.jiayang.quickandroid.widget.lshadowlayout.ShadowRelativeLayout>
+
+        <com.jiayang.quickandroid.widget.lshadowlayout.ShadowRelativeLayout
+            android:id="@+id/watchlist_top_request_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/layoutSize20"
+            android:layout_marginTop="@dimen/layoutSize10"
+            android:layout_marginRight="@dimen/layoutSize40"
+            android:layout_marginBottom="@dimen/layoutSize15"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:padding="@dimen/layoutSize40"
+            app:l_radius="@dimen/layoutSize26"
+            app:l_shadowAlpha="0.8"
+            app:l_shadowElevation="@dimen/layoutSize7">
+
+            <ImageView
+                android:layout_width="@dimen/layoutSize52"
+                android:layout_height="@dimen/layoutSize60"
+                android:src="@drawable/icon_request_gold" />
+
+            <TextView
+                android:id="@+id/watchlist_top_request_num_view"
+                style="@style/TextRegularStyle"
+                android:layout_centerHorizontal="true"
+                android:text="20"
+                android:textColor="@color/black_15"
+                android:textSize="@dimen/textSize55" />
+
+            <TextView
+                style="@style/TextRegularStyle"
+                android:layout_below="@+id/watchlist_top_request_num_view"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/layoutSize30"
+                android:ellipsize="middle"
+                android:gravity="center"
+                android:maxLines="2"
+                android:text="active requets"
+                android:textColor="@color/black_15"
+                android:textSize="@dimen/textSize42" />
+
+        </com.jiayang.quickandroid.widget.lshadowlayout.ShadowRelativeLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/watchlist_top_bottom_select_view"
+        style="@style/TextRegularStyle"
+        android:layout_marginLeft="@dimen/layoutSize40"
+        android:layout_marginTop="@dimen/layoutSize65"
+        android:layout_marginRight="@dimen/layoutSize40"
+        android:layout_marginBottom="@dimen/layoutSize80"
+        android:gravity="center"
+        android:text="Select a currency you would want to keep track of and add it to your watchlist."
+        android:textColor="@color/grey_58"
+        android:textSize="@dimen/textSize37" />
+
+    <TextView
+        android:id="@+id/watchlist_top_bottom_best_view"
+        style="@style/TextBoldStyle"
+        android:layout_marginLeft="@dimen/layoutSize40"
+        android:layout_marginTop="@dimen/layoutSize90"
+        android:layout_marginRight="@dimen/layoutSize40"
+        android:layout_marginBottom="@dimen/layoutSize30"
+        android:text="Best rate of the day:"
+        android:textColor="@color/black_06"
+        android:textSize="@dimen/textSize55"
+        android:visibility="gone" />
+
+
+</LinearLayout>

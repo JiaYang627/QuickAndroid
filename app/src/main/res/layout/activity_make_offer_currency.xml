@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/include_title_bar_layout"
+        layout="@layout/common_title_bar_layout" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/layoutSize60">
+
+            <TextView
+                android:id="@+id/currency_make_offer_top_left_text"
+                style="@style/TextRegularStyle"
+                android:text="X MoneyChanger"
+                android:textColor="@color/grey_58"
+                android:textSize="@dimen/textSize42"
+                app:layout_constraintBottom_toBottomOf="@+id/view_profile_text_view"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/view_profile_text_view" />
+
+            <TextView
+                android:id="@+id/view_profile_text_view"
+                style="@style/TextRegularStyle"
+                android:layout_width="@dimen/layoutSize0"
+                android:layout_marginLeft="@dimen/layoutSize50"
+                android:background="@drawable/bg_button_blue_selector"
+                android:gravity="center_horizontal"
+                android:paddingTop="@dimen/layoutSize30"
+                android:paddingBottom="@dimen/layoutSize30"
+                android:text="View Profile"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSize42"
+                app:layout_constraintLeft_toRightOf="@+id/currency_make_offer_top_left_text"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/currency_make_offer_top_currency_text"
+                style="@style/TextRegularStyle"
+                android:layout_marginTop="@dimen/layoutSize50"
+                app:layout_goneMarginTop="@dimen/layoutSize0"
+                android:text="Currentcy offer:"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize42"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view_profile_text_view" />
+
+            <!--select currency layout-->
+
+            <LinearLayout
+                android:id="@+id/currency_make_offer_top_left_currency_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/layoutSize25"
+                android:layout_marginRight="@dimen/layoutSize60"
+                android:background="@drawable/shape_bg_react_white_line_blue_26r"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/layoutSize30"
+                android:paddingRight="@dimen/layoutSize55"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/currency_make_offer_top_img"
+                app:layout_constraintTop_toBottomOf="@+id/currency_make_offer_top_currency_text">
+
+                <ImageView
+                    android:id="@+id/currency_make_offer_top_left_currency_left_img"
+                    android:layout_width="@dimen/layoutSize110"
+                    android:layout_height="@dimen/layoutSize73"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/layoutSize30"
+                    android:src="@drawable/icon_country" />
+
+                <TextView
+                    android:id="@+id/currency_make_offer_top_left_currency_left_country_text"
+                    style="@style/TextRegularStyle"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:includeFontPadding="false"
+                    android:paddingTop="@dimen/layoutSize30"
+                    android:paddingBottom="@dimen/layoutSize30"
+                    android:text="USD"
+                    android:textColor="@color/grey_40"
+                    android:textColorHint="@color/grey_af"
+                    android:textSize="@dimen/textSize50" />
+
+                <ImageView
+                    android:layout_width="@dimen/layoutSize34"
+                    android:layout_height="@dimen/layoutSize20"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/icon_arrow_down_blue" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/currency_make_offer_top_img"
+                android:layout_width="@dimen/layoutSize40"
+                android:layout_height="@dimen/layoutSize55"
+                android:src="@drawable/icon_exchange"
+                app:layout_constraintBottom_toBottomOf="@+id/currency_make_offer_top_left_currency_layout"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/currency_make_offer_top_left_currency_layout" />
+
+            <LinearLayout
+
+                android:id="@+id/market_offer_top_select_right_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/layoutSize55"
+                android:layout_marginTop="@dimen/layoutSize25"
+                android:background="@drawable/shape_bg_react_white_line_blue_26r"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/layoutSize30"
+                android:paddingRight="@dimen/layoutSize55"
+                app:layout_constraintLeft_toRightOf="@+id/currency_make_offer_top_img"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/currency_make_offer_top_currency_text">
+
+                <ImageView
+                    android:id="@+id/market_add_top_select_right_img"
+                    android:layout_width="@dimen/layoutSize110"
+                    android:layout_height="@dimen/layoutSize73"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/layoutSize30"
+                    android:src="@drawable/icon_country" />
+
+                <TextView
+                    android:id="@+id/market_add_top_select_right_country_text"
+                    style="@style/TextRegularStyle"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:includeFontPadding="false"
+                    android:paddingTop="@dimen/layoutSize30"
+                    android:paddingBottom="@dimen/layoutSize30"
+                    android:text="USD"
+                    android:textColor="@color/grey_40"
+                    android:textColorHint="@color/grey_af"
+                    android:textSize="@dimen/textSize50" />
+
+                <ImageView
+                    android:layout_width="@dimen/layoutSize34"
+                    android:layout_height="@dimen/layoutSize20"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/icon_arrow_down_blue"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/currency_make_offer_top_fixed_text"
+                style="@style/TextRegularStyle"
+                android:layout_marginTop="@dimen/layoutSize65"
+                android:text="Fixed Rate:"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize42"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/currency_make_offer_top_left_currency_layout" />
+
+            <TextView
+                android:id="@+id/currency_make_offer_top_fixed_show_text"
+                style="@style/TextRegularStyle"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/layoutSize20"
+                android:background="@drawable/shape_bg_react_grey_13r"
+                android:gravity="center_horizontal"
+                android:paddingTop="@dimen/layoutSize30"
+                android:paddingBottom="@dimen/layoutSize30"
+                android:text="1 SGD = 0.74311 USD"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize42"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/currency_make_offer_top_fixed_text" />
+
+
+            <TextView
+                android:id="@+id/currency_make_offer_top_amount_text"
+                style="@style/TextRegularStyle"
+                android:layout_marginTop="@dimen/layoutSize65"
+                android:text="Enter amount payable:"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize42"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/currency_make_offer_top_fixed_show_text" />
+
+            <TextView
+                android:id="@+id/currency_make_offer_top_amount_input_left_text"
+                style="@style/TextRegularStyle"
+                android:layout_width="0dp"
+                android:layout_marginTop="@dimen/layoutSize20"
+                android:layout_marginRight="@dimen/layoutSize25"
+                android:background="@drawable/shape_bg_react_grey_13r"
+                android:gravity="center_horizontal"
+                android:paddingTop="@dimen/layoutSize35"
+                android:paddingBottom="@dimen/layoutSize35"
+                android:text="IDR$"
+                android:textColor="@color/selector_text_color_grey"
+                android:textSize="@dimen/textSize42"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/currency_make_offer_top_request_right_edit"
+                app:layout_constraintTop_toBottomOf="@+id/currency_make_offer_top_amount_text" />
+
+            <EditText
+                android:id="@+id/currency_make_offer_top_request_right_edit"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/shape_bg_react_white_line_blue_13r"
+                android:gravity="center"
+                android:text="-"
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey_af"
+                android:textSize="@dimen/textSize42"
+                app:layout_constraintBottom_toBottomOf="@+id/currency_make_offer_top_amount_input_left_text"
+                app:layout_constraintHorizontal_weight="3"
+                app:layout_constraintLeft_toRightOf="@+id/currency_make_offer_top_amount_input_left_text"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/currency_make_offer_top_amount_input_left_text" />
+
+
+            <TextView
+                android:id="@+id/payment_type_text"
+                style="@style/TextRegularStyle"
+                android:layout_marginTop="@dimen/layoutSize95"
+                android:text="Payment type:"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize42"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/currency_make_offer_top_amount_input_left_text" />
+
+
+            <LinearLayout
+                android:id="@+id/payment_type_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/layoutSize20"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/payment_type_text">
+
+                <TextView
+                    android:id="@+id/payment_type_cash"
+                    style="@style/TextRegularStyle"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/shape_bg_react_grey_13r"
+                    android:gravity="center_horizontal"
+                    android:paddingTop="@dimen/layoutSize30"
+                    android:paddingBottom="@dimen/layoutSize30"
+                    android:text="Cash"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textSize42"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/payment_type_two_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/payment_type_ewallet"
+                        style="@style/TextRegularStyle"
+                        android:layout_width="0dp"
+                        android:layout_marginRight="@dimen/layoutSize20"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_bg_plat_whit_blue_13r"
+                        android:gravity="center_horizontal"
+                        android:paddingTop="@dimen/layoutSize30"
+                        android:paddingBottom="@dimen/layoutSize30"
+                        android:text="eWallet"
+                        android:textColor="@color/selector_text_color_blue"
+                        android:textIsSelectable="false"
+                        android:textSize="@dimen/textSize37" />
+
+                    <TextView
+                        android:id="@+id/payment_type_paynow"
+                        style="@style/TextRegularStyle"
+                        android:layout_width="0dp"
+                        android:layout_marginLeft="@dimen/layoutSize20"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_bg_plat_whit_blue_13r"
+                        android:gravity="center_horizontal"
+                        android:paddingTop="@dimen/layoutSize30"
+                        android:paddingBottom="@dimen/layoutSize30"
+                        android:text="Paynow"
+                        android:textColor="@color/selector_text_color_blue"
+                        android:textSize="@dimen/textSize37" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/payment_type_bottom_hint_text"
+                style="@style/TextRegularStyle"
+                android:layout_marginTop="@dimen/layoutSize50"
+                android:gravity="center_horizontal"
+                android:text="A total of SGD$100.00 will be held in your eWallet, until offer is accepted or rejected."
+                android:textColor="@color/grey_58"
+                android:textSize="@dimen/textSize31"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/payment_type_layout" />
+
+            <TextView
+                android:id="@+id/breakdown_text"
+                style="@style/TextRegularStyle"
+                android:layout_marginTop="@dimen/layoutSize70"
+                android:text="Breakdown:"
+                android:textColor="@color/black_1f"
+                android:textSize="@dimen/textSize42"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/payment_type_bottom_hint_text" />
+
+            <TextView
+                android:id="@+id/receive_text"
+                style="@style/TextRegularStyle"
+                android:layout_width="0dp"
+                android:text="Receive:"
+                android:textColor="@color/black_26"
+                android:textSize="@dimen/textSize42"
+                app:layout_constraintBottom_toBottomOf="@+id/receive_right_text"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/receive_right_text"
+                app:layout_constraintTop_toTopOf="@+id/receive_right_text" />
+
+            <TextView
+                android:id="@+id/receive_right_text"
+                style="@style/TextRegularStyle"
+                android:layout_width="0dp"
+                android:layout_marginTop="@dimen/layoutSize30"
+                android:background="@drawable/shape_bg_react_grey_13r"
+                android:gravity="center_horizontal"
+                android:paddingTop="@dimen/layoutSize30"
+                android:paddingBottom="@dimen/layoutSize30"
+                android:text="USD$740.31"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize42"
+                app:layout_constraintHorizontal_weight="3"
+                app:layout_constraintLeft_toRightOf="@+id/receive_text"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/breakdown_text" />
+
+            <TextView
+                android:id="@+id/payable_text"
+                style="@style/TextRegularStyle"
+                android:layout_width="0dp"
+                android:text="Payable:"
+                android:textColor="@color/black_26"
+                android:textSize="@dimen/textSize42"
+                app:layout_constraintBottom_toBottomOf="@+id/payable_right_text"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/payable_right_text"
+                app:layout_constraintTop_toTopOf="@+id/payable_right_text" />
+
+            <TextView
+                android:id="@+id/payable_right_text"
+                style="@style/TextRegularStyle"
+                android:layout_width="0dp"
+                android:layout_marginTop="@dimen/layoutSize60"
+                android:background="@drawable/shape_bg_react_grey_13r"
+                android:gravity="center_horizontal"
+                android:paddingTop="@dimen/layoutSize30"
+                android:paddingBottom="@dimen/layoutSize30"
+                android:text="SGD$740.31"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize42"
+                app:layout_constraintHorizontal_weight="3"
+                app:layout_constraintLeft_toRightOf="@+id/payable_text"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/receive_right_text" />
+
+            <TextView
+                android:id="@+id/currency_make_offer_submit"
+                style="@style/TextBoldStyle"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/layoutSize150"
+                android:layout_marginBottom="@dimen/layoutSize50"
+                android:background="@drawable/bg_button_blue_selector"
+                android:gravity="center_horizontal"
+                android:paddingTop="@dimen/layoutSize30"
+                android:paddingBottom="@dimen/layoutSize30"
+                android:text="Submit offer"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSize42"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/payable_right_text" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

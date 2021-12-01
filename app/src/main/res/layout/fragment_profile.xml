@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/include_title_bar_layout"
+        style="@style/TitleBarStyleForCons"
+        layout="@layout/common_title_bar_layout" />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/permissionText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/layoutSize60"
+                android:layout_marginTop="@dimen/layoutSize100"
+                android:layout_marginEnd="@dimen/layoutSize60"
+                android:layout_marginBottom="@dimen/layoutSize90"
+                android:background="@drawable/bg_button_blue_selector"
+                android:fontFamily="@font/poppins_bold"
+                android:gravity="center_horizontal"
+                android:paddingTop="@dimen/layoutSize30"
+                android:paddingBottom="@dimen/layoutSize30"
+                android:text="测试请求权限 PermissionX"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSize42"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/chooseImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/layoutSize60"
+                android:layout_marginTop="@dimen/layoutSize100"
+                android:layout_marginEnd="@dimen/layoutSize60"
+                android:layout_marginBottom="@dimen/layoutSize90"
+                android:background="@drawable/bg_button_blue_selector"
+                android:fontFamily="@font/poppins_bold"
+                android:gravity="center_horizontal"
+                android:paddingTop="@dimen/layoutSize30"
+                android:paddingBottom="@dimen/layoutSize30"
+                android:text="测试请求相册"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSize42"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/permissionText" />
+            <TextView
+                android:id="@+id/testToken"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/layoutSize60"
+                android:layout_marginTop="@dimen/layoutSize100"
+                android:layout_marginEnd="@dimen/layoutSize60"
+                android:layout_marginBottom="@dimen/layoutSize90"
+                android:background="@drawable/bg_button_blue_selector"
+                android:fontFamily="@font/poppins_bold"
+                android:gravity="center_horizontal"
+                android:paddingTop="@dimen/layoutSize30"
+                android:paddingBottom="@dimen/layoutSize30"
+                android:text="测试请求Token失效 跳转登录"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSize42"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/chooseImage" />
+
+
+
+            <ImageView
+                android:id="@+id/normalImage"
+                android:layout_width="@dimen/layoutSize200"
+                android:layout_height="@dimen/layoutSize200"
+                android:layout_marginLeft="@dimen/layoutSize60"
+                android:layout_marginTop="@dimen/layoutSize50"
+                android:src="@mipmap/ic_launcher"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/testToken" />
+
+            <ImageView
+                android:src="@mipmap/ic_launcher"
+                android:id="@+id/circleImage"
+                android:layout_width="@dimen/layoutSize200"
+                android:layout_height="@dimen/layoutSize200"
+                android:layout_marginLeft="@dimen/layoutSize100"
+                app:layout_constraintLeft_toRightOf="@+id/normalImage"
+                app:layout_constraintTop_toTopOf="@+id/normalImage" />
+
+            <ImageView
+                android:src="@mipmap/ic_launcher"
+                android:id="@+id/roundedImage"
+                android:layout_width="@dimen/layoutSize200"
+                android:layout_height="@dimen/layoutSize200"
+                android:layout_marginLeft="@dimen/layoutSize100"
+                app:layout_constraintLeft_toRightOf="@+id/circleImage"
+                app:layout_constraintTop_toTopOf="@+id/circleImage" />
+
+            <ImageView
+                android:id="@+id/blurlImage"
+                android:layout_width="@dimen/layoutSize200"
+                android:layout_height="@dimen/layoutSize200"
+                android:layout_marginLeft="@dimen/layoutSize60"
+                android:layout_marginTop="@dimen/layoutSize50"
+                android:src="@mipmap/ic_launcher"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/normalImage" />
+
+            <ImageView
+                android:id="@+id/graylImage"
+                android:layout_width="@dimen/layoutSize200"
+                android:layout_height="@dimen/layoutSize200"
+                android:layout_marginLeft="@dimen/layoutSize100"
+                android:src="@mipmap/ic_launcher"
+                app:layout_constraintLeft_toRightOf="@+id/blurlImage"
+                app:layout_constraintTop_toTopOf="@+id/blurlImage" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>

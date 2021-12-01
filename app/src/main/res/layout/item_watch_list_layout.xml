@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jiayang.quickandroid.widget.lshadowlayout.ShadowConstraintLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="@dimen/layoutSize30"
+    android:layout_marginBottom="@dimen/layoutSize30"
+    android:layout_marginLeft="@dimen/layoutSize40"
+    android:layout_marginRight="@dimen/layoutSize40"
+    app:l_radius="@dimen/layoutSize26"
+    app:l_shadowAlpha="0.8"
+    android:paddingTop="@dimen/layoutSize40"
+    android:paddingBottom="@dimen/layoutSize40"
+    android:paddingLeft="@dimen/layoutSize60"
+    android:paddingRight="@dimen/layoutSize60"
+    app:l_shadowElevation="@dimen/layoutSize7"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/item_watch_list_img_view"
+        android:src="@drawable/icon_small"
+        android:layout_width="@dimen/layoutSize73"
+        android:layout_height="@dimen/layoutSize76" />
+
+    <TextView
+        android:id="@+id/item_watch_list_left_text_view"
+        android:layout_marginLeft="@dimen/layoutSize55"
+        android:textSize="@dimen/textSize31"
+        android:text="SGD >\nX MoneyChanger"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="@color/grey_4a"
+        app:layout_constraintLeft_toRightOf="@+id/item_watch_list_img_view"
+        style="@style/TextRegularStyle" />
+
+    <ImageView
+        android:id="@+id/item_watch_list_right_img_view"
+        android:src="@drawable/icon_arrow_right"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="@dimen/layoutSize18"
+        android:layout_height="@dimen/layoutSize34" />
+
+    <TextView
+        android:id="@+id/item_watch_list_right_text_view"
+        app:layout_constraintRight_toLeftOf="@+id/item_watch_list_right_img_view"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginRight="@dimen/layoutSize40"
+        android:text="1 SGD =\n1.45123 USD"
+        android:textColor="@color/grey_4a"
+        android:textSize="@dimen/textSize42"
+        style="@style/TextRegularStyle" />
+
+
+
+
+
+</com.jiayang.quickandroid.widget.lshadowlayout.ShadowConstraintLayout>

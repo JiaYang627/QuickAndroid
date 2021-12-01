@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:id="@+id/currency_top_select_left_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/layoutSize60"
+        android:layout_marginTop="@dimen/layoutSize40"
+        android:layout_marginRight="@dimen/layoutSize60"
+        android:background="@drawable/shape_bg_react_white_line_blue_26r"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/layoutSize30"
+        android:paddingRight="@dimen/layoutSize55"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/currency_top_img_layout"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/currency_top_select_left_img"
+            android:layout_width="@dimen/layoutSize110"
+            android:layout_height="@dimen/layoutSize73"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/layoutSize30"
+            android:src="@drawable/icon_country" />
+
+        <TextView
+            android:id="@+id/currency_top_select_left_country_text"
+            style="@style/TextRegularStyle"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:includeFontPadding="false"
+            android:paddingTop="@dimen/layoutSize30"
+            android:paddingBottom="@dimen/layoutSize30"
+            android:text="USD"
+            android:textColor="@color/grey_40"
+            android:textColorHint="@color/grey_af"
+            android:textSize="@dimen/textSize50" />
+
+        <ImageView
+            android:layout_width="@dimen/layoutSize34"
+            android:layout_height="@dimen/layoutSize20"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/icon_arrow_down_blue" />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/currency_top_left_input_edit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/layoutSize60"
+        android:layout_marginTop="@dimen/layoutSize15"
+        android:layout_marginRight="@dimen/layoutSize60"
+        android:background="@drawable/shape_bg_react_white_line_blue_26r"
+        android:paddingLeft="@dimen/layoutSize30"
+        android:paddingTop="@dimen/layoutSize30"
+        android:paddingRight="@dimen/layoutSize30"
+        android:paddingBottom="@dimen/layoutSize30"
+        android:text="-"
+        android:textColor="@color/black"
+        android:textColorHint="@color/grey_af"
+        android:textSize="@dimen/textSize42"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/currency_top_img_layout"
+        app:layout_constraintTop_toBottomOf="@+id/currency_top_select_left_layout" />
+
+    <com.jiayang.quickandroid.widget.lshadowlayout.ShadowFrameLayout
+        android:id="@+id/currency_top_img_layout"
+        android:layout_width="@dimen/layoutSize86"
+        android:layout_height="@dimen/layoutSize86"
+        android:background="@color/white"
+        app:l_radius="@dimen/layoutSize13"
+        app:l_shadowAlpha="0.8"
+        app:l_shadowElevation="@dimen/layoutSize7"
+        app:layout_constraintBottom_toBottomOf="@+id/currency_top_left_input_edit"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/currency_top_select_left_layout">
+
+        <ImageView
+            android:layout_width="@dimen/layoutSize40"
+            android:layout_height="@dimen/layoutSize55"
+            android:layout_gravity="center"
+            android:src="@drawable/icon_exchange" />
+
+    </com.jiayang.quickandroid.widget.lshadowlayout.ShadowFrameLayout>
+
+
+    <LinearLayout
+        android:id="@+id/currency_top_select_right_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/layoutSize55"
+        android:layout_marginTop="@dimen/layoutSize40"
+        android:layout_marginRight="@dimen/layoutSize60"
+        android:background="@drawable/shape_bg_react_white_line_blue_26r"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/layoutSize30"
+        android:paddingRight="@dimen/layoutSize55"
+        app:layout_constraintLeft_toRightOf="@+id/currency_top_img_layout"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/market_add_top_select_right_img"
+            android:layout_width="@dimen/layoutSize110"
+            android:layout_height="@dimen/layoutSize73"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/layoutSize30"
+            android:src="@drawable/icon_country" />
+
+        <TextView
+            android:id="@+id/market_add_top_select_right_country_text"
+            style="@style/TextRegularStyle"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:includeFontPadding="false"
+            android:paddingTop="@dimen/layoutSize30"
+            android:paddingBottom="@dimen/layoutSize30"
+            android:text="USD"
+            android:textColor="@color/grey_40"
+            android:textColorHint="@color/grey_af"
+            android:textSize="@dimen/textSize50" />
+
+        <ImageView
+            android:layout_width="@dimen/layoutSize34"
+            android:layout_height="@dimen/layoutSize20"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/icon_arrow_down_blue"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/currency_top_right_input_edit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/layoutSize55"
+        android:layout_marginTop="@dimen/layoutSize15"
+        android:layout_marginRight="@dimen/layoutSize60"
+        android:background="@drawable/shape_bg_react_white_line_blue_26r"
+        android:paddingLeft="@dimen/layoutSize30"
+        android:paddingTop="@dimen/layoutSize30"
+        android:paddingRight="@dimen/layoutSize30"
+        android:paddingBottom="@dimen/layoutSize30"
+        android:text="-"
+        android:textColor="@color/black"
+        android:textColorHint="@color/grey_af"
+        android:textSize="@dimen/textSize42"
+        app:layout_constraintLeft_toRightOf="@+id/currency_top_img_layout"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/currency_top_select_right_layout" />
+
+
+    <com.flyco.tablayout.SegmentTabLayout
+        android:id="@+id/currency_top_segment_tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layoutSize115"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="@dimen/layoutSize60"
+        android:layout_marginTop="@dimen/layoutSize80"
+        android:layout_marginRight="@dimen/layoutSize60"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/currency_top_left_input_edit"
+        app:tl_bar_color="@color/common_enable_blue"
+        app:tl_indicator_anim_enable="true"
+        app:tl_indicator_bounce_enable="false"
+        app:tl_indicator_color="@color/common_blue"
+        app:tl_tab_padding="@dimen/layoutSize20" />
+
+    <ImageView
+        android:id="@+id/currency_top_digital_left_img"
+        android:layout_width="@dimen/layoutSize52"
+        android:layout_height="@dimen/layoutSize50"
+        android:layout_marginLeft="@dimen/layoutSize75"
+        android:src="@drawable/icon_digital_white"
+        app:layout_constraintBottom_toBottomOf="@+id/currency_top_segment_tablayout"
+        app:layout_constraintLeft_toLeftOf="@+id/currency_top_segment_tablayout"
+        app:layout_constraintTop_toTopOf="@+id/currency_top_segment_tablayout" />
+
+    <ImageView
+        android:id="@+id/currency_top_cash_right_img"
+        android:layout_width="@dimen/layoutSize50"
+        android:layout_height="@dimen/layoutSize45"
+        android:layout_marginRight="@dimen/layoutSize75"
+        android:src="@drawable/icon_cash_blue"
+        app:layout_constraintBottom_toBottomOf="@+id/currency_top_segment_tablayout"
+        app:layout_constraintRight_toRightOf="@+id/currency_top_segment_tablayout"
+        app:layout_constraintTop_toTopOf="@+id/currency_top_segment_tablayout" />
+
+
+    <com.jiayang.quickandroid.widget.lshadowlayout.ShadowConstraintLayout
+        android:id="@+id/currency_top_search_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/layoutSize60"
+        android:layout_marginTop="@dimen/layoutSize40"
+        android:layout_marginRight="@dimen/layoutSize60"
+        android:background="@color/white"
+        app:l_radius="@dimen/layoutSize60"
+        app:l_shadowAlpha="0.8"
+        app:l_shadowElevation="@dimen/layoutSize7"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/currency_top_filter_img"
+        app:layout_constraintTop_toBottomOf="@+id/currency_top_segment_tablayout">
+
+        <TextView
+            style="@style/TextRegularStyle"
+            android:layout_marginLeft="@dimen/layoutSize35"
+            android:text="Search currency"
+            android:textColor="@color/grey_3f"
+            android:textSize="@dimen/textSize42"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/currency_top_search_img"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/currency_top_search_img"
+            android:layout_width="@dimen/layoutSize58"
+            android:layout_height="@dimen/layoutSize63"
+            android:layout_marginLeft="@dimen/layoutSize35"
+            android:layout_marginTop="@dimen/layoutSize30"
+            android:layout_marginRight="@dimen/layoutSize60"
+            android:layout_marginBottom="@dimen/layoutSize30"
+            android:src="@drawable/icon_search_gold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </com.jiayang.quickandroid.widget.lshadowlayout.ShadowConstraintLayout>
+
+    <ImageView
+        android:id="@+id/currency_top_filter_img"
+        android:layout_width="@dimen/layoutSize60"
+        android:layout_height="@dimen/layoutSize63"
+        android:layout_marginLeft="@dimen/layoutSize45"
+        android:src="@drawable/icon_filter"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/currency_top_search_layout"
+        app:layout_constraintLeft_toRightOf="@+id/currency_top_search_layout"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/currency_top_search_layout" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/currency_top_show_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/layoutSize60"
+        android:layout_marginTop="@dimen/layoutSize40"
+        android:layout_marginRight="@dimen/layoutSize60"
+        android:background="@drawable/shape_bg_shade_blue"
+        android:paddingLeft="@dimen/layoutSize60"
+        android:paddingTop="@dimen/layoutSize50"
+        android:paddingRight="@dimen/layoutSize60"
+        android:paddingBottom="@dimen/layoutSize50"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/currency_top_search_layout">
+
+        <TextView
+            android:id="@+id/currency_top_show_left_text"
+            style="@style/TextRegularStyle"
+            android:layout_width="0dp"
+            android:ellipsize="end"
+            android:text="SGD> \nMohamed Yoonu.."
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSize31"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/currency_top_show_middle_text"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/currency_top_show_right_arrow"
+            android:layout_width="@dimen/layoutSize18"
+            android:layout_height="@dimen/layoutSize34"
+            android:src="@drawable/icon_arrow_right"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/white" />
+
+        <LinearLayout
+            android:id="@+id/currency_top_show_distance_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/layoutSize60"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            app:layout_constraintRight_toLeftOf="@+id/currency_top_show_right_arrow"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="@dimen/layoutSize26"
+                android:layout_height="@dimen/layoutSize37"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/layoutSize10"
+                android:src="@drawable/icon_gps_white" />
+
+            <TextView
+                android:id="@+id/currency_top_show_distance_text"
+                style="@style/TextRegularStyle"
+                android:text="1.2km"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSize42" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/currency_top_show_middle_text"
+            style="@style/TextRegularStyle"
+            android:layout_marginRight="@dimen/layoutSize50"
+            android:text="1 SGD =\n0.40021 USD"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSize42"
+            app:layout_constraintRight_toLeftOf="@+id/currency_top_show_distance_layout"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/currency_top_show_bottom_text"
+        style="@style/TextRegularStyle"
+        android:layout_marginTop="@dimen/layoutSize20"
+        android:layout_marginRight="@dimen/layoutSize60"
+        android:text="Best Rate of the day!"
+        android:textColor="@color/grey_4a"
+        android:textSize="@dimen/textSize31"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/currency_top_show_layout" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

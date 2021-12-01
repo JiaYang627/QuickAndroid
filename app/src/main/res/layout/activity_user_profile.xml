@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/include_title_bar_layout"
+        layout="@layout/common_title_bar_layout" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFF1F7FF"
+                android:paddingLeft="@dimen/layoutSize50"
+                android:paddingTop="@dimen/layoutSize45"
+                android:paddingRight="@dimen/layoutSize50"
+                android:paddingBottom="@dimen/layoutSize45">
+
+                <ImageView
+                    android:id="@+id/user_pic"
+                    android:layout_width="157pt"
+                    android:layout_height="157pt"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:src="@drawable/ic_launcher_background" />
+
+                <TextView
+                    android:id="@+id/user_store_info"
+                    style="@style/TextRegularStyle"
+                    android:layout_marginLeft="@dimen/layoutSize45"
+                    android:layout_marginRight="@dimen/layoutSize50"
+                    android:text="ABC Currency Store\nLocated at: Jurong Point\nShopping Center #01-01/02"
+                    android:textColor="@color/grey_40"
+                    android:textSize="@dimen/textSize31"
+                    app:layout_constraintLeft_toRightOf="@+id/user_pic"
+                    app:layout_constraintRight_toLeftOf="@+id/change_outlet_text"
+                    app:layout_constraintTop_toTopOf="@+id/user_pic" />
+
+                <TextView
+                    android:id="@+id/change_outlet_text"
+                    style="@style/TextRegularStyle"
+                    android:layout_width="@dimen/layoutSize0"
+                    android:background="@drawable/bg_button_blue_selector"
+                    android:gravity="center_horizontal"
+                    android:paddingTop="@dimen/layoutSize40"
+                    android:paddingBottom="@dimen/layoutSize40"
+                    android:text="Change Outlet"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textSize31"
+                    app:layout_constraintLeft_toRightOf="@+id/user_store_info"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/store_info_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/layoutSize60"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/user_pic">
+
+                    <View
+                        android:id="@+id/content_view"
+                        android:layout_width="@dimen/layoutSize3"
+                        android:layout_height="@dimen/layoutSize86"
+                        android:background="@color/common_blue"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        tools:ignore="MissingConstraints" />
+
+                    <TextView
+                        android:id="@+id/user_cash_text"
+                        style="@style/TextMediumStyle"
+                        android:layout_width="0dp"
+                        android:gravity="center_horizontal"
+                        android:text="Cash Store"
+                        android:textColor="@color/grey_40"
+                        android:textSize="@dimen/textSize42"
+                        app:layout_constraintBottom_toBottomOf="@+id/content_view"
+                        app:layout_constraintLeft_toRightOf="@+id/store_img"
+                        app:layout_constraintRight_toLeftOf="@+id/content_view"
+                        app:layout_constraintTop_toTopOf="@+id/content_view" />
+
+                    <ImageView
+                        android:id="@+id/store_img"
+                        android:layout_width="@dimen/layoutSize64"
+                        android:layout_height="@dimen/layoutSize60"
+                        android:src="@drawable/icon_tab_markept_n"
+                        app:layout_constraintBottom_toBottomOf="@+id/content_view"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@+id/user_cash_text"
+                        app:layout_constraintTop_toTopOf="@+id/content_view"
+                        app:tint="@color/common_gold" />
+
+                    <TextView
+                        android:id="@+id/transition_text"
+                        style="@style/TextMediumStyle"
+                        android:layout_width="@dimen/layoutSize0"
+                        android:gravity="center_horizontal"
+                        android:text="200\ntransactions made"
+                        android:textColor="@color/grey_40"
+                        android:textSize="@dimen/textSize31"
+                        app:layout_constraintBottom_toBottomOf="@+id/content_view"
+                        app:layout_constraintLeft_toRightOf="@+id/content_view"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/content_view" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/order_info_layout"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/layoutSize60"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/user_pic">
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/two_outlet_content_view_left"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.375"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        tools:ignore="MissingConstraints" />
+
+                    <View
+                        android:id="@+id/type_outlet_content_view_left"
+                        android:layout_width="@dimen/layoutSize3"
+                        android:layout_height="@dimen/layoutSize86"
+                        android:background="@color/common_blue"
+                        app:layout_constraintLeft_toLeftOf="@+id/two_outlet_content_view_left"
+                        app:layout_constraintTop_toTopOf="@+id/two_outlet_content_view_left"
+                        tools:ignore="MissingConstraints" />
+
+
+                    <TextView
+                        android:id="@+id/two_outlet_left_text"
+                        style="@style/TextRegularStyle"
+                        android:layout_width="@dimen/layoutSize0"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/grey_40"
+                        android:textSize="@dimen/textSize31"
+                        app:layout_constraintBottom_toBottomOf="@+id/type_outlet_content_view_left"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="@+id/type_outlet_content_view_left"
+                        app:layout_constraintTop_toTopOf="@+id/type_outlet_content_view_left"
+                        tools:text="200\n transactions made" />
+
+                    <TextView
+                        android:id="@+id/two_outlet_middle_text"
+                        style="@style/TextRegularStyle"
+                        android:layout_width="@dimen/layoutSize0"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/grey_40"
+                        android:textSize="@dimen/textSize31"
+                        app:layout_constraintBottom_toBottomOf="@+id/type_outlet_content_view_left"
+                        app:layout_constraintLeft_toLeftOf="@+id/type_outlet_content_view_left"
+                        app:layout_constraintRight_toRightOf="@+id/type_outlet_content_view_right"
+                        app:layout_constraintTop_toTopOf="@+id/type_outlet_content_view_left"
+                        tools:text="4.5/5.0\n ratings" />
+
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/two_outlet_content_view_right"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.625"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        tools:ignore="MissingConstraints" />
+
+                    <View
+                        android:id="@+id/type_outlet_content_view_right"
+                        android:layout_width="@dimen/layoutSize3"
+                        android:layout_height="@dimen/layoutSize86"
+                        android:background="@color/common_blue"
+                        app:layout_constraintLeft_toLeftOf="@+id/two_outlet_content_view_right"
+                        app:layout_constraintTop_toTopOf="@+id/two_outlet_content_view_right"
+                        tools:ignore="MissingConstraints" />
+
+                    <TextView
+                        android:id="@+id/two_outlet_right_text"
+                        style="@style/TextRegularStyle"
+                        android:layout_width="@dimen/layoutSize0"
+                        android:gravity="center_horizontal"
+                        android:text="-"
+                        android:textColor="@color/grey_40"
+                        android:textSize="@dimen/textSize31"
+                        app:layout_constraintBottom_toBottomOf="@+id/type_outlet_content_view_right"
+                        app:layout_constraintLeft_toLeftOf="@+id/type_outlet_content_view_right"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/type_outlet_content_view_right" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.flyco.tablayout.SegmentTabLayout
+                android:id="@+id/user_profile_tab_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layoutSize115"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="@dimen/layoutSize60"
+                android:layout_marginTop="@dimen/layoutSize65"
+                android:layout_marginRight="@dimen/layoutSize60"
+                app:tl_bar_color="@color/common_enable_blue"
+                app:tl_indicator_anim_enable="true"
+                app:tl_indicator_bounce_enable="false"
+                app:tl_indicator_color="@color/common_blue"
+                app:tl_tab_padding="@dimen/layoutSize20" />
+
+            <com.jiayang.quickandroid.widget.lshadowlayout.ShadowConstraintLayout
+                android:id="@+id/user_profile_search_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/layoutSize60"
+                android:layout_marginTop="@dimen/layoutSize60"
+                android:layout_marginRight="@dimen/layoutSize60"
+                android:background="@color/white"
+                app:l_radius="@dimen/layoutSize60"
+                app:l_shadowAlpha="0.8"
+                app:l_shadowElevation="@dimen/layoutSize7">
+
+                <TextView
+                    style="@style/TextRegularStyle"
+                    android:layout_marginLeft="@dimen/layoutSize35"
+                    android:text="Search currency"
+                    android:textColor="@color/grey_3f"
+                    android:textSize="@dimen/textSize42"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@+id/currency_top_search_img"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/currency_top_search_img"
+                    android:layout_width="@dimen/layoutSize58"
+                    android:layout_height="@dimen/layoutSize63"
+                    android:layout_marginLeft="@dimen/layoutSize35"
+                    android:layout_marginTop="@dimen/layoutSize30"
+                    android:layout_marginRight="@dimen/layoutSize60"
+                    android:layout_marginBottom="@dimen/layoutSize30"
+                    android:src="@drawable/icon_search_gold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </com.jiayang.quickandroid.widget.lshadowlayout.ShadowConstraintLayout>
+
+            <com.iappsasia.industry_android.widget.recyclerview.QuickRecyclerView
+                android:id="@+id/user_profile_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/layoutSize30"
+                android:paddingBottom="@dimen/layoutSize30" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>
