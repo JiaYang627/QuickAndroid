@@ -17,6 +17,7 @@
 
 #### 注意
 项目中用了自定义阴影布局，如果为运行 可能xml中不显示具体效果，运行后在看即可查看效果
+
 运行项目后 Login页面无需输入账号密码，点击登陆按钮即可跳转首页
 
 项目使用了[BlankJ](https://github.com/Blankj) 的 `AdaptScreenUtils`,遂项目中 xml 开发都是使用pt为单位，且前3个Fragment UI 均为公司项目第一版UI
