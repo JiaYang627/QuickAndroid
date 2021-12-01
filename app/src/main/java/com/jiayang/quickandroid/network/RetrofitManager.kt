@@ -2,7 +2,7 @@ package cn.jiayang.kotlinstudyjetpack.network
 
 import com.jiayang.quickandroid.network.ApiService
 import com.jiayang.quickandroid.network.CommonHeaderInterceptor
-import com.iappsasia.industry_android.network.TokenInterceptor
+import com.jiayang.quickandroid.network.TokenInterceptor
 import com.jiayang.quickandroid.BuildConfig
 import com.jiayang.quickandroid.network.HttpHeaders
 import com.jiayang.quickandroid.utils.HttpsUtils
@@ -43,7 +43,7 @@ object RetrofitManager {
                     )
                         com.blankj.utilcode.util.LogUtils.e(message)
 //                    else
-                        com.blankj.utilcode.util.LogUtils.e(message)
+//                        com.blankj.utilcode.util.LogUtils.e(message)
                 }
             })
 

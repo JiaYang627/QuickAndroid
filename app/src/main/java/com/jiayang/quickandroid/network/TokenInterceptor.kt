@@ -1,8 +1,10 @@
-package com.iappsasia.industry_android.network
+package com.jiayang.quickandroid.network
 
 import android.annotation.SuppressLint
 import com.iappsasia.industry_android.base.CommonLiveBusEvent
+import com.iappsasia.industry_android.network.BaseResultData
 import com.jeremyliao.liveeventbus.LiveEventBus
+import com.jiayang.quickandroid.base.fromJsonByBaseResultType
 import com.jiayang.quickandroid.utils.decodeString
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.Types
@@ -36,10 +38,12 @@ class TokenInterceptor:Interceptor {
             it.source().let { it ->
                 it.request(Long.MAX_VALUE)
                 val readString = it.buffer.clone().readString(StandardCharsets.UTF_8)
-                val mTypes :Type =
-                    Types.newParameterizedType(BaseResultData::class.java, String()::class.java)
-                val fromJson = Moshi.Builder().build().adapter<BaseResultData<String>>(mTypes)
-                    .fromJson(readString)
+//                val mTypes :Type =
+//                    Types.newParameterizedType(BaseResultData::class.java, String()::class.java)
+//                val fromJson = Moshi.Builder().build().adapter<BaseResultData<String>>(mTypes)
+//                    .fromJson(readString)
+
+                val fromJson = fromJsonByBaseResultType<String>(readString)
                 fromJson?.let {
                     when(it.mStatusCode){
 //                        1023->ToastUtils.showLong("Token 失效")
