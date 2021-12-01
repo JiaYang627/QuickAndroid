@@ -22,7 +22,7 @@
 按照`AdaptScreenUtils`的使用，在BaseActivity 中对宽度进行了配置,所以，在查看布局xml的时候 在布局 split 页面下，
 勾选创建的Virtual Devices,创建Virtual Devices 尺寸参考下图
 
-![Virtual Devices]()
+![Virtual Devices](https://github.com/JiaYang627/QuickAndroid/blob/main/pic/img.png)
 
 
 #### 网络配置 --> RetrofitManager
