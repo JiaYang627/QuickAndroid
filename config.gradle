@@ -39,7 +39,8 @@ ext {
     ]
 
     kapts = [
-            moshi                     : "com.squareup.moshi:moshi-kotlin-codegen:1.12.0"
+            moshi                     : "com.squareup.moshi:moshi-kotlin-codegen:1.12.0",
+            hilt                      : "com.google.dagger:hilt-android-compiler:2.28-alpha"
     ]
 
     apis = [
@@ -60,6 +61,7 @@ ext {
             androidxRecyclerView      : "androidx.recyclerview:recyclerview:1.2.1",
             androidxViewPager2        : "androidx.viewpager:viewpager:1.0.0",
             moshi                     : "com.squareup.moshi:moshi-kotlin:1.12.0",
+            hilt                      : "com.google.dagger:hilt-android:2.28-alpha",
 
             // github repository
             kotlinCoroutines          : "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2",
