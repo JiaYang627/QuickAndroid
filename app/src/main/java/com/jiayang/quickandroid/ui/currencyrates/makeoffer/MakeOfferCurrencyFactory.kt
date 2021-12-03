@@ -1,4 +1,4 @@
-package com.iappsasia.industry_android.ui.currencyrates.makeoffer
+package com.jiayang.quickandroid.ui.currencyrates.makeoffer
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

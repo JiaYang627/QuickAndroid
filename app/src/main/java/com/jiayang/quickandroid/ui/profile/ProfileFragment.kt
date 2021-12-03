@@ -3,10 +3,10 @@ package com.jiayang.quickandroid.ui.profile
 import android.Manifest
 import android.app.Activity.RESULT_OK
 import android.content.Intent
-import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Build
 import android.view.View
+import androidx.fragment.app.viewModels
 import coil.load
 import coil.transform.BlurTransformation
 import coil.transform.CircleCropTransformation
@@ -16,11 +16,11 @@ import com.blankj.utilcode.util.*
 import com.iappsasia.industry_android.base.LCoilEngine
 import com.jiayang.quickandroid.R
 import com.jiayang.quickandroid.base.BaseLazyFragment
-import com.jiayang.quickandroid.base.downloadImage
 import com.jiayang.quickandroid.databinding.FragmentProfileBinding
 import com.jiayang.quickandroid.ui.main.MainActivity
 import com.permissionx.guolindev.PermissionX
 import com.yalantis.ucrop.UCrop
+import dagger.hilt.android.AndroidEntryPoint
 import top.limuyang2.photolibrary.LPhotoHelper
 import top.limuyang2.photolibrary.util.LPPImageType
 
@@ -29,11 +29,15 @@ import top.limuyang2.photolibrary.util.LPPImageType
  * @date ：2021-11-17 15：41
  * 邮箱   ：JiaYang627@163.com
  */
+@AndroidEntryPoint
 class ProfileFragment : BaseLazyFragment<FragmentProfileBinding>() {
 
     companion object{
         val CHOOSE_PHOTO_REQUEST = 100
     }
+    // use hilt
+    private val mViewModel : ProfileViewModel by viewModels()
+
     override fun initLazyFragment() {
         mBindingView.apply {
             includeTitleBarLayout.let {

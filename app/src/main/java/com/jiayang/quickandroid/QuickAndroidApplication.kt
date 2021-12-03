@@ -4,12 +4,14 @@ import android.app.Application
 import android.content.Context
 import com.blankj.utilcode.util.LogUtils
 import com.tencent.mmkv.MMKV
+import dagger.hilt.android.HiltAndroidApp
 
 /**
  * @author ：Tom Zhang - Android Developer
  * @date ：2021-12-01 14：03
  * 邮箱   ：JiaYang627@163.com / Tom@iappsasia.com
  */
+@HiltAndroidApp
 class QuickAndroidApplication :Application() {
 
     companion object{

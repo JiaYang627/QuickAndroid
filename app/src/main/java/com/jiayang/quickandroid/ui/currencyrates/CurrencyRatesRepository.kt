@@ -1,4 +1,4 @@
-package com.iappsasia.industry_android.ui.currencyrates
+package com.jiayang.quickandroid.ui.currencyrates
 
 import android.annotation.SuppressLint
 import android.view.View
@@ -9,6 +9,8 @@ import com.blankj.utilcode.util.SpanUtils
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.viewholder.BaseViewHolder
 import com.jiayang.quickandroid.R
+import com.jiayang.quickandroid.network.ApiService
+import javax.inject.Inject
 
 /**
  * @author ：Tom Zhang - Android Developer
@@ -44,5 +46,5 @@ class CurrencyRatesAdapter(mList: MutableList<String> = mutableListOf()) :
 }
 
 
-class CurrencyRatesRepository {
+class CurrencyRatesRepository @Inject constructor(private val apiService: ApiService){
 }

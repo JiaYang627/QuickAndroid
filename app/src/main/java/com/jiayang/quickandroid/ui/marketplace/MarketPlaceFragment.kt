@@ -7,27 +7,28 @@ import androidx.fragment.app.viewModels
 import coil.load
 import com.blankj.utilcode.util.BarUtils
 import com.blankj.utilcode.util.ToastUtils
-import com.iappsasia.industry_android.ui.marketplace.MarketPlaceAdapter
-import com.iappsasia.industry_android.ui.marketplace.MarketPlaceFactory
-import com.iappsasia.industry_android.ui.marketplace.MarketPlaceRepository
-import com.iappsasia.industry_android.ui.marketplace.MarketPlaceViewModel
 import com.jiayang.quickandroid.ui.notifications.NotificationsActivity
 import com.iappsasia.industry_android.widget.recyclerview.QuickLinearLayoutManager
 import com.jiayang.quickandroid.R
 import com.jiayang.quickandroid.base.BaseLazyFragment
 import com.jiayang.quickandroid.databinding.FragmentMarketPlaceBinding
 import com.jiayang.quickandroid.network.MarketPlaceMultiItemBean
+import dagger.hilt.android.AndroidEntryPoint
 
 /**
  * @author ：张 奎
  * @date ：2021-11-17 13：33
  * 邮箱   ：JiaYang627@163.com
  */
+@AndroidEntryPoint
 class MarketPlaceFragment : BaseLazyFragment<FragmentMarketPlaceBinding>() {
 
-    private val mViewModel: MarketPlaceViewModel by viewModels {
-        MarketPlaceFactory(MarketPlaceRepository())
-    }
+//    private val mViewModel: MarketPlaceViewModel by viewModels {
+//        MarketPlaceFactory(MarketPlaceRepository())
+//    }
+    // use hilt
+    private val mViewModel: MarketPlaceViewModel by viewModels()
+
     private val mList : MutableList<MarketPlaceMultiItemBean> = arrayListOf()
 
     private val mAdapter : MarketPlaceAdapter by lazy {

@@ -1,4 +1,4 @@
-package com.iappsasia.industry_android.ui.login
+package com.jiayang.quickandroid.ui.login
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

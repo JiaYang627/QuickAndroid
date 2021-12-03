@@ -11,9 +11,7 @@ import com.blankj.utilcode.util.BarUtils
 import com.blankj.utilcode.util.SpanUtils
 import com.blankj.utilcode.util.ToastUtils
 import com.flyco.tablayout.listener.OnTabSelectListener
-import com.iappsasia.industry_android.ui.marketplace.MarketPlaceAdapter
-import com.iappsasia.industry_android.ui.profile.viewprofile.UserProfileFactory
-import com.iappsasia.industry_android.ui.profile.viewprofile.UserProfileViewModel
+import com.jiayang.quickandroid.ui.marketplace.MarketPlaceAdapter
 import com.iappsasia.industry_android.widget.ldialog.LDialog
 import com.iappsasia.industry_android.widget.ldialog.base.BaseLDialog
 import com.iappsasia.industry_android.widget.ldialog.base.ViewHandlerListener
@@ -24,17 +22,21 @@ import com.jiayang.quickandroid.R
 import com.jiayang.quickandroid.base.BaseActivity
 import com.jiayang.quickandroid.databinding.ActivityUserProfileBinding
 import com.jiayang.quickandroid.network.MarketPlaceMultiItemBean
+import dagger.hilt.android.AndroidEntryPoint
 
 /**
  * @author ：Tom Zhang - Android Developer
  * @date ：2021-11-28 15：24
  * 邮箱   ：JiaYang627@163.com / Tom@iappsasia.com
  */
+@AndroidEntryPoint
 class UserProfileActivity : BaseActivity<ActivityUserProfileBinding>() {
 
-    private val mViewModel: UserProfileViewModel by viewModels {
-        UserProfileFactory(UserProfileRepository())
-    }
+//    private val mViewModel: UserProfileViewModel by viewModels {
+//        UserProfileFactory(UserProfileRepository())
+//    }
+    // use hilt
+    private val mViewModel: UserProfileViewModel by viewModels()
 
     private val mList: MutableList<String> = mutableListOf()
 

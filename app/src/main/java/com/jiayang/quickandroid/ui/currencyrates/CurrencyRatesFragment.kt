@@ -10,25 +10,26 @@ import com.blankj.utilcode.util.AdaptScreenUtils
 import com.blankj.utilcode.util.BarUtils
 import com.blankj.utilcode.util.SpanUtils
 import com.flyco.tablayout.listener.OnTabSelectListener
-import com.iappsasia.industry_android.ui.currencyrates.CurrencyRatesAdapter
-import com.iappsasia.industry_android.ui.currencyrates.CurrencyRatesRepository
-import com.iappsasia.industry_android.ui.currencyrates.CurrencyRatesViewModel
 import com.jiayang.quickandroid.ui.currencyrates.makeoffer.MakeOfferCurrencyActivity
 import com.iappsasia.industry_android.widget.recyclerview.QuickLinearLayoutManager
 import com.jiayang.quickandroid.R
 import com.jiayang.quickandroid.base.BaseLazyFragment
 import com.jiayang.quickandroid.databinding.FragmentCurrencyRatesBinding
+import dagger.hilt.android.AndroidEntryPoint
 
 /**
  * @author ：张 奎
  * @date ：2021-11-17 14：57
  * 邮箱   ：JiaYang627@163.com
  */
+@AndroidEntryPoint
 class CurrencyRatesFragment : BaseLazyFragment<FragmentCurrencyRatesBinding>() {
 
-    private val mViewModel: CurrencyRatesViewModel by viewModels {
-        CurrencyRatesFactory(CurrencyRatesRepository())
-    }
+//    private val mViewModel: CurrencyRatesViewModel by viewModels {
+//        CurrencyRatesFactory(CurrencyRatesRepository())
+//    }
+    // use hilt
+    private val mViewModel: CurrencyRatesViewModel by viewModels()
 
     private val mList: MutableList<String> = mutableListOf()
     private val  mAdapter by lazy {

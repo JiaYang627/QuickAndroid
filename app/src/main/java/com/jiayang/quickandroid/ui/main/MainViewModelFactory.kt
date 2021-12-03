@@ -1,8 +1,7 @@
-package com.iappsasia.industry_android.ui.main
+package com.jiayang.quickandroid.ui.main
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.jiayang.quickandroid.ui.main.MainRepository
 
 /**
  * @author ：张 奎

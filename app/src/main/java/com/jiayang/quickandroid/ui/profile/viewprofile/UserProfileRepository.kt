@@ -3,6 +3,8 @@ package com.jiayang.quickandroid.ui.profile.viewprofile
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.viewholder.BaseViewHolder
 import com.jiayang.quickandroid.R
+import com.jiayang.quickandroid.network.ApiService
+import javax.inject.Inject
 
 /**
  * @author ：Tom Zhang - Android Developer
@@ -20,5 +22,5 @@ class UserProfileAdapter(mList :MutableList<String> = mutableListOf()):
 
 }
 
-class UserProfileRepository {
+class UserProfileRepository @Inject constructor(private val apiService: ApiService){
 }

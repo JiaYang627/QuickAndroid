@@ -9,11 +9,11 @@ import com.blankj.utilcode.util.BarUtils
 import com.blankj.utilcode.util.ToastUtils
 import com.jiayang.quickandroid.ui.notifications.NotificationsActivity
 import com.iappsasia.industry_android.ui.watchlist.WatchListFactory
-import com.iappsasia.industry_android.ui.watchlist.WatchListViewModel
 import com.iappsasia.industry_android.widget.recyclerview.QuickLinearLayoutManager
 import com.jiayang.quickandroid.R
 import com.jiayang.quickandroid.base.BaseLazyFragment
 import com.jiayang.quickandroid.databinding.FragmentWatchListBinding
+import dagger.hilt.android.AndroidEntryPoint
 
 
 /**
@@ -21,11 +21,15 @@ import com.jiayang.quickandroid.databinding.FragmentWatchListBinding
  * @date ：2021-11-17 13：25
  * 邮箱   ：JiaYang627@163.com
  */
+@AndroidEntryPoint
 class WatchListFragment : BaseLazyFragment<FragmentWatchListBinding>() {
 
-    private val mViewModel: WatchListViewModel by viewModels {
-        WatchListFactory(WatchListRepository())
-    }
+    //    private val mViewModel: WatchListViewModel by viewModels {
+//        WatchListFactory(WatchListRepository())
+//    }
+    // use hilt
+    private val mViewModel: WatchListViewModel by viewModels()
+
     private val mList: MutableList<String> = mutableListOf()
 
     private val mAdapter: WatchListAdapter by lazy { WatchListAdapter(mList) }

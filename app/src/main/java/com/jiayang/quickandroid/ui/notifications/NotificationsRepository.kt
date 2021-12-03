@@ -3,6 +3,8 @@ package com.jiayang.quickandroid.ui.notifications
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.viewholder.BaseViewHolder
 import com.jiayang.quickandroid.R
+import com.jiayang.quickandroid.network.ApiService
+import javax.inject.Inject
 
 /**
  * @author ：Tom Zhang - Android Developer
@@ -20,5 +22,5 @@ class NotificationsAdapter(mList: MutableList<String> = mutableListOf()) :
 
 }
 
-class NotificationsRepository {
+class NotificationsRepository @Inject constructor(private val apiService: ApiService){
 }

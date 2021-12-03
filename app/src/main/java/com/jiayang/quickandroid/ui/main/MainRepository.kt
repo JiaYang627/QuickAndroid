@@ -1,8 +1,10 @@
 package com.jiayang.quickandroid.ui.main
 
 import cn.jiayang.kotlinstudyjetpack.network.RetrofitManager
+import com.jiayang.quickandroid.network.ApiService
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
+import javax.inject.Inject
 
 /**
  * @author ：张 奎
@@ -10,12 +12,10 @@ import kotlinx.coroutines.withContext
  * 邮箱   ：JiaYang627@163.com
  */
 
-
-
-class MainRepository{
+class MainRepository @Inject constructor(private val apiService: ApiService){
     suspend fun login(userName: String, password: String) =
         withContext(Dispatchers.IO){
-        RetrofitManager.apiService.login(userName, password)
+        apiService.login(userName, password)
     }
 
 

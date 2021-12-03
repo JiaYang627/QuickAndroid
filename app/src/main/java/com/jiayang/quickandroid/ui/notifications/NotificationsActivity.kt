@@ -5,18 +5,18 @@ import androidx.activity.viewModels
 import coil.load
 import com.blankj.utilcode.util.BarUtils
 import com.blankj.utilcode.util.ToastUtils
-import com.iappsasia.industry_android.ui.notifications.NotificationsFactory
-import com.iappsasia.industry_android.ui.notifications.NotificationsViewModel
 import com.iappsasia.industry_android.widget.recyclerview.QuickLinearLayoutManager
 import com.jiayang.quickandroid.R
 import com.jiayang.quickandroid.base.BaseActivity
 import com.jiayang.quickandroid.databinding.ActivityNotificationsBinding
+import dagger.hilt.android.AndroidEntryPoint
 
 /**
  * @author ：Tom Zhang - Android Developer
  * @date ：2021-11-26 09：41
  * 邮箱   ：JiaYang627@163.com / Tom@iappsasia.com
  */
+@AndroidEntryPoint
 class NotificationsActivity : BaseActivity<ActivityNotificationsBinding>() {
 
     private val mList: MutableList<String> = mutableListOf()
@@ -25,9 +25,11 @@ class NotificationsActivity : BaseActivity<ActivityNotificationsBinding>() {
         NotificationsAdapter(mList)
     }
 
-    private val mViewModel: NotificationsViewModel by viewModels {
-        NotificationsFactory(NotificationsRepository())
-    }
+//    private val mViewModel: NotificationsViewModel by viewModels {
+//        NotificationsFactory(NotificationsRepository())
+//    }
+    // use hilt
+    private val mViewModel: NotificationsViewModel by viewModels()
 
     override fun initActivity(savedInstanceState: Bundle?) {
         mBindingView.apply {

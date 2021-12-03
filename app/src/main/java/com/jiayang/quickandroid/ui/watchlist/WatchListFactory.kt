@@ -3,6 +3,7 @@ package com.iappsasia.industry_android.ui.watchlist
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.jiayang.quickandroid.ui.watchlist.WatchListRepository
+import com.jiayang.quickandroid.ui.watchlist.WatchListViewModel
 
 /**
  * @author ：张 奎

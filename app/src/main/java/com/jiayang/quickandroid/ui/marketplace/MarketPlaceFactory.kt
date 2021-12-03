@@ -1,4 +1,4 @@
-package com.iappsasia.industry_android.ui.marketplace
+package com.jiayang.quickandroid.ui.marketplace
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

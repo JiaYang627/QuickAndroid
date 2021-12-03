@@ -1,11 +1,13 @@
-package com.iappsasia.industry_android.ui.marketplace
+package com.jiayang.quickandroid.ui.marketplace
 
 import com.blankj.utilcode.util.AdaptScreenUtils
 import com.blankj.utilcode.util.SpanUtils
 import com.chad.library.adapter.base.BaseMultiItemQuickAdapter
 import com.chad.library.adapter.base.viewholder.BaseViewHolder
 import com.jiayang.quickandroid.R
+import com.jiayang.quickandroid.network.ApiService
 import com.jiayang.quickandroid.network.MarketPlaceMultiItemBean
+import javax.inject.Inject
 
 /**
  * @author ：Tom Zhang - Android Developer
@@ -42,5 +44,5 @@ class MarketPlaceAdapter(mList: MutableList<MarketPlaceMultiItemBean> = mutableL
     }
 }
 
-class MarketPlaceRepository {
+class MarketPlaceRepository @Inject constructor(private val apiService: ApiService){
 }

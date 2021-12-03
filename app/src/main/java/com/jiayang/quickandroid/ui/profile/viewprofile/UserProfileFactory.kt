@@ -1,8 +1,7 @@
-package com.iappsasia.industry_android.ui.profile.viewprofile
+package com.jiayang.quickandroid.ui.profile.viewprofile
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.jiayang.quickandroid.ui.profile.viewprofile.UserProfileRepository
 
 /**
  * @author ：Tom Zhang - Android Developer

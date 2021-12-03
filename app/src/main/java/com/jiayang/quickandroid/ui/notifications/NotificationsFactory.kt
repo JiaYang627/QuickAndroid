@@ -1,8 +1,7 @@
-package com.iappsasia.industry_android.ui.notifications
+package com.jiayang.quickandroid.ui.notifications
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.jiayang.quickandroid.ui.notifications.NotificationsRepository
 
 /**
  * @author ：Tom Zhang - Android Developer

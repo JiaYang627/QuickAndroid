@@ -6,6 +6,8 @@ import com.blankj.utilcode.util.SpanUtils
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.viewholder.BaseViewHolder
 import com.jiayang.quickandroid.R
+import com.jiayang.quickandroid.network.ApiService
+import javax.inject.Inject
 
 /**
  * @author ：张 奎
@@ -26,5 +28,5 @@ class WatchListAdapter(mList: MutableList<String>? = mutableListOf()) :
 
 }
 
-class WatchListRepository {
+class WatchListRepository @Inject constructor(private val apiService: ApiService) {
 }

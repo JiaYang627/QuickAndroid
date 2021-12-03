@@ -12,8 +12,6 @@ import com.flyco.tablayout.listener.CustomTabEntity
 import com.flyco.tablayout.listener.OnTabSelectListener
 import com.iappsasia.industry_android.base.CommonLiveBusEvent
 import com.jiayang.quickandroid.ui.currencyrates.CurrencyRatesFragment
-import com.iappsasia.industry_android.ui.main.MainViewModel
-import com.iappsasia.industry_android.ui.main.MainViewModelFactory
 import com.jiayang.quickandroid.ui.marketplace.MarketPlaceFragment
 import com.jiayang.quickandroid.ui.watchlist.WatchListFragment
 import com.jeremyliao.liveeventbus.LiveEventBus
@@ -24,12 +22,16 @@ import com.jiayang.quickandroid.databinding.ActivityMainBinding
 import com.jiayang.quickandroid.entity.TabEntity
 import com.jiayang.quickandroid.ui.login.LoginActivity
 import com.jiayang.quickandroid.ui.profile.ProfileFragment
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_main.*
 
+@AndroidEntryPoint
 class MainActivity : BaseActivity<ActivityMainBinding>() {
-    val mMainViewModel: MainViewModel by viewModels {
-        MainViewModelFactory(MainRepository())
-    }
+//    val mMainViewModel: MainViewModel by viewModels {
+//        MainViewModelFactory(MainRepository())
+//    }
+    // use hilt
+    val mMainViewModel : MainViewModel by viewModels()
 
     private val mBottomTitle by lazy {
         arrayListOf("WatchList", "MarketPlace", "Currency Rate", "Profile")

@@ -1,11 +1,11 @@
 # QuickAndroid
-> 写在前面：搭建此项目 目的为了学习Kotlin 以及相关第三方库(用到的协程都是最基础的，没有使用Flow Hilt等),公司项目一直为Java ,没有Kotlin 实战的机会,并且一直在开发h5 php 抽不开身系统的学习Kotlin
+> 写在前面：搭建此项目 目的为了学习Kotlin 以及相关第三方库(用到的协程都是最基础的，没有使用Flow等),公司项目一直为Java ,没有Kotlin 实战的机会,并且一直在开发h5 php 抽不开身系统的学习Kotlin
 > 碰巧另一项目组需要开发新App,这才有了Kotlin实战的机会,搭建了一个简单的基础框架用于后续开发快速使用。
 > 此项目前3个页面为此次项目第一版UI，最后一个页面 `Profile` 演示了 请求权限、请求相册、模拟Token失效、Coil的使用
 ### 项目基础架构
 
 * 网络 ：Retrofit + Okhttp + Coroutines
-* UI绑定 ：ViewBinding
+* UI绑定 ：ViewBinding(https://developer.android.com/topic/libraries/view-binding)
 * 数据解析 ：[Moshi](https://github.com/square/moshi)
 * 消息通知 ：[LifeEventBus](https://github.com/JeremyLiao/LiveEventBus)
 * 图片加载 ：[coil](https://github.com/coil-kt/coil)
@@ -14,6 +14,7 @@
 * ImageCrop : [UCrop](https://github.com/Yalantis/uCrop)
 * ImageChoose : [LPhotoPicker](https://github.com/limuyang2/LPhotoPicker)
 * Data storage : [MMKV](https://github.com/Tencent/MMKV)
+* 依赖注入 : [Hilt](https://developer.android.com/training/dependency-injection)
 
 #### 注意
 项目中用了自定义阴影布局，如果为运行 可能xml中不显示具体效果，运行后在看即可查看效果
@@ -25,6 +26,12 @@
 勾选创建的Virtual Devices,创建Virtual Devices 尺寸参考下图
 
 ![Virtual Devices](https://github.com/JiaYang627/QuickAndroid/blob/main/pic/img.png)
+
+#### Hilt
+03-12-2021 添加Hilt
+官方文档请看英语版，切换页面语言为中文 会发现依赖不是最新版，和当前项目依赖不一样。
+如果英语版看不懂，推荐 看一遍[郭霖](https://guolin.blog.csdn.net/) 的文章 [带你玩转Hilt和依赖注入](https://blog.csdn.net/guolin_blog/article/details/109787732?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522163850054516780269881756%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fblog.%2522%257D&request_id=163850054516780269881756&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~blog~first_rank_v2~rank_v29-1-109787732.pc_v2_rank_blog_default&utm_term=%E6%B3%A8%E5%85%A5&spm=1018.2226.3001.4450)
+学习了解一下什么是Hilt ,然后再在官网中查看一些更新的注解 具体为 :[作用域 Scope](https://developer.android.com/training/dependency-injection/hilt-android#component-scopes) 以及最新的 [配合ViewModel使用](https://developer.android.com/training/dependency-injection/hilt-jetpack)
 
 
 #### 网络配置 --> RetrofitManager

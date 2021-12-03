@@ -2,8 +2,6 @@ package com.jiayang.quickandroid.ui.currencyrates
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.iappsasia.industry_android.ui.currencyrates.CurrencyRatesRepository
-import com.iappsasia.industry_android.ui.currencyrates.CurrencyRatesViewModel
 
 /**
  * @author ：Tom Zhang - Android Developer

@@ -16,6 +16,7 @@ import com.blankj.utilcode.util.LanguageUtils
 import com.iappsasia.industry_android.base.createViewBindingForAct
 import com.iappsasia.industry_android.widget.ldialog.LDialog
 import com.jiayang.quickandroid.R
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.cancel
