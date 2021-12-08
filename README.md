@@ -27,6 +27,18 @@
 
 ![Virtual Devices](https://github.com/JiaYang627/QuickAndroid/blob/main/pic/img.png)
 
+
+#### Template 的使用
+项目对应的一键生成页面插件,项目地址 [TinMVVM](https://github.com/JiaYang627/TinMVVM),文件在 `template`下,导入AS插件即可使用
+
+说几点使用事项
+* 点击`app` 或者 包名 右键 - New - other
+* 使用的时候 `Generate Activity` 默认为勾选状态，如果不想生成Act ，需要先去掉 `Generate Activity` 的勾选，
+  在勾选 `Generate Fragment`，别问为啥，问就是你在这给我刷bug呢 ？我也想做联动啥的，但是插件代码拿不到值变化监听。
+* 填写`Activity Package Name` 或者 `Fragment Package Name` 的时候 ，我测试过二级目录，比如`ui.xxx`，结果发现不会合并，你想尝试 我也不拦你。
+* 插件是给自己使用的，如果你作为开发像用户那样在这里测试插件，那你还做什么开发啊。我也想过如何解决，但是编写插件代码没有方法支持啊。我也很无奈。
+  编写插件目的就是为了自己的使用，知道怎么用 何必考虑那么复杂情况呢 ？
+
 #### Hilt
 03-12-2021 添加Hilt
 官方文档请看英语版，切换页面语言为中文 会发现依赖不是最新版，和当前项目依赖不一样。
