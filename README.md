@@ -38,6 +38,10 @@
 * 填写`Activity Package Name` 或者 `Fragment Package Name` 的时候 ，我测试过二级目录，比如`ui.xxx`，结果发现不会合并，你想尝试 我也不拦你。
 * 插件是给自己使用的，如果你作为开发像用户那样在这里测试插件，那你还做什么开发啊。我也想过如何解决，但是编写插件代码没有方法支持啊。我也很无奈。
   编写插件目的就是为了自己的使用，知道怎么用 何必考虑那么复杂情况呢 ？
+  
+![TemplateUse](https://github.com/JiaYang627/QuickAndroid/blob/main/pic/TemplateUse.png)
+
+![TemplateDetails](https://github.com/JiaYang627/QuickAndroid/blob/main/pic/TemplateDetails.png)
 
 #### Hilt
 03-12-2021 添加Hilt
