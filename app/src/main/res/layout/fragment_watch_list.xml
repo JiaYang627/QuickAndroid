@@ -28,7 +28,7 @@
                 android:id="@+id/include_top_layout"
                 layout="@layout/watch_list_top_layout" />
 
-            <com.iappsasia.industry_android.widget.recyclerview.QuickRecyclerView
+            <com.jiayang.quickandroid.widget.recyclerview.QuickRecyclerView
                 android:id="@+id/watchlist_recycler_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

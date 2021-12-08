@@ -17,7 +17,7 @@ import com.iappsasia.industry_android.widget.ldialog.base.BaseLDialog
 import com.iappsasia.industry_android.widget.ldialog.base.ViewHandlerListener
 import com.iappsasia.industry_android.widget.ldialog.base.ViewHolder
 import com.iappsasia.industry_android.widget.ldialog.base.setOnClickListener
-import com.iappsasia.industry_android.widget.recyclerview.QuickLinearLayoutManager
+import com.jiayang.quickandroid.widget.recyclerview.QuickLinearLayoutManager
 import com.jiayang.quickandroid.R
 import com.jiayang.quickandroid.base.BaseActivity
 import com.jiayang.quickandroid.databinding.ActivityUserProfileBinding

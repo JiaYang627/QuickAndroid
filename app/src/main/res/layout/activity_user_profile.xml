@@ -264,7 +264,7 @@
 
             </com.jiayang.quickandroid.widget.lshadowlayout.ShadowConstraintLayout>
 
-            <com.iappsasia.industry_android.widget.recyclerview.QuickRecyclerView
+            <com.jiayang.quickandroid.widget.recyclerview.QuickRecyclerView
                 android:id="@+id/user_profile_recycler_view"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"

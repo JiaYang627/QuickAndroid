@@ -5,7 +5,7 @@ import androidx.activity.viewModels
 import coil.load
 import com.blankj.utilcode.util.BarUtils
 import com.blankj.utilcode.util.ToastUtils
-import com.iappsasia.industry_android.widget.recyclerview.QuickLinearLayoutManager
+import com.jiayang.quickandroid.widget.recyclerview.QuickLinearLayoutManager
 import com.jiayang.quickandroid.R
 import com.jiayang.quickandroid.base.BaseActivity
 import com.jiayang.quickandroid.databinding.ActivityNotificationsBinding

@@ -25,7 +25,7 @@
                 android:id="@+id/include_currency_top_layout"
                 layout="@layout/currency_rates_top_layout" />
 
-            <com.iappsasia.industry_android.widget.recyclerview.QuickRecyclerView
+            <com.jiayang.quickandroid.widget.recyclerview.QuickRecyclerView
                 android:layout_marginTop="@dimen/layoutSize40"
                 android:paddingBottom="@dimen/layoutSize20"
                 android:layout_width="match_parent"

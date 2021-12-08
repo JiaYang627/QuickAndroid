@@ -1,4 +1,4 @@
-package com.iappsasia.industry_android.widget.recyclerview
+package com.jiayang.quickandroid.widget.recyclerview
 
 import android.content.Context
 import android.util.AttributeSet

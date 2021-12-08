@@ -9,7 +9,7 @@
         android:id="@+id/include_title_bar_layout"
         layout="@layout/common_title_bar_layout" />
 
-    <com.iappsasia.industry_android.widget.recyclerview.QuickRecyclerView
+    <com.jiayang.quickandroid.widget.recyclerview.QuickRecyclerView
         android:paddingTop="@dimen/layoutSize60"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/include_title_bar_layout"

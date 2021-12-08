@@ -11,7 +11,7 @@ import com.blankj.utilcode.util.BarUtils
 import com.blankj.utilcode.util.SpanUtils
 import com.flyco.tablayout.listener.OnTabSelectListener
 import com.jiayang.quickandroid.ui.currencyrates.makeoffer.MakeOfferCurrencyActivity
-import com.iappsasia.industry_android.widget.recyclerview.QuickLinearLayoutManager
+import com.jiayang.quickandroid.widget.recyclerview.QuickLinearLayoutManager
 import com.jiayang.quickandroid.R
 import com.jiayang.quickandroid.base.BaseLazyFragment
 import com.jiayang.quickandroid.databinding.FragmentCurrencyRatesBinding

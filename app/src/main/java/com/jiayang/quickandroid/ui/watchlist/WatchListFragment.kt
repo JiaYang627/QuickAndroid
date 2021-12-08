@@ -8,8 +8,7 @@ import coil.load
 import com.blankj.utilcode.util.BarUtils
 import com.blankj.utilcode.util.ToastUtils
 import com.jiayang.quickandroid.ui.notifications.NotificationsActivity
-import com.iappsasia.industry_android.ui.watchlist.WatchListFactory
-import com.iappsasia.industry_android.widget.recyclerview.QuickLinearLayoutManager
+import com.jiayang.quickandroid.widget.recyclerview.QuickLinearLayoutManager
 import com.jiayang.quickandroid.R
 import com.jiayang.quickandroid.base.BaseLazyFragment
 import com.jiayang.quickandroid.databinding.FragmentWatchListBinding

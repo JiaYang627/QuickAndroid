@@ -1,22 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.jiayang.quickandroid">
-    <uses-permission android:name="android.permission.INTERNET" />
 
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="29" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="29"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="29" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="29" />
     <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
+
     <application
         android:name=".QuickAndroidApplication"
         android:allowBackup="true"
         android:icon="@drawable/icon_quick"
         android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
         android:roundIcon="@drawable/icon_quick"
         android:supportsRtl="true"
-        android:networkSecurityConfig="@xml/network_security_config"
         android:theme="@style/Theme.QuickAndroid">
-
         <activity
             android:name=".ui.login.SplashActivity"
             android:configChanges="screenSize|orientation|keyboardHidden|uiMode"
@@ -30,33 +34,34 @@
             </intent-filter>
         </activity>
         <activity
-            android:launchMode="singleTask"
-            android:screenOrientation="fullSensor"
+            android:name=".ui.main.MainActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:name=".ui.main.MainActivity"/>
-
+            android:launchMode="singleTask"
+            android:screenOrientation="fullSensor" />
         <activity
             android:name="com.yalantis.ucrop.UCropActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-
         <activity
             android:name=".ui.login.LoginActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="fullSensor"
             android:windowSoftInputMode="adjustPan|stateHidden" />
-        <activity android:name=".ui.notifications.NotificationsActivity"
-            android:windowSoftInputMode="adjustPan|stateHidden"
+        <activity
+            android:name=".ui.notifications.NotificationsActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:screenOrientation="fullSensor"/>
-        <activity android:name=".ui.currencyrates.makeoffer.MakeOfferCurrencyActivity"
-            android:windowSoftInputMode="adjustPan|stateHidden"
+            android:screenOrientation="fullSensor"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".ui.currencyrates.makeoffer.MakeOfferCurrencyActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:screenOrientation="fullSensor"/>
-        <activity android:name=".ui.profile.viewprofile.UserProfileActivity"
-            android:windowSoftInputMode="adjustPan|stateHidden"
+            android:screenOrientation="fullSensor"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".ui.profile.viewprofile.UserProfileActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:screenOrientation="fullSensor"/>
+            android:screenOrientation="fullSensor"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
     </application>
 
 </manifest>
