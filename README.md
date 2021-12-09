@@ -29,7 +29,7 @@
 
 
 #### Template 的使用
-项目对应的一键生成页面插件,项目地址 [TinMVVM](https://github.com/JiaYang627/TinMVVM),文件在 `template`下,导入AS插件即可使用
+项目对应的一键生成页面插件,项目地址 [TinMVVM](https://github.com/JiaYang627/TinMVVM),编译好的插件在此项目 `template`文件夹下,导入AS插件即可使用
 
 说几点使用事项
 * 点击`app` 或者 包名 右键 - New - other
