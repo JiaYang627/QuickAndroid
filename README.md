@@ -5,7 +5,7 @@
 ### 项目基础架构
 
 * 网络 ：Retrofit + Okhttp + Coroutines
-* UI绑定 ：ViewBinding(https://developer.android.com/topic/libraries/view-binding)
+* UI绑定 ：[ViewBinding](https://developer.android.com/topic/libraries/view-binding)
 * 数据解析 ：[Moshi](https://github.com/square/moshi)
 * 消息通知 ：[LifeEventBus](https://github.com/JeremyLiao/LiveEventBus)
 * 图片加载 ：[coil](https://github.com/coil-kt/coil)
