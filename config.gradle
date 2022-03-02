@@ -76,7 +76,7 @@ ext {
             brvah                     : "com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.3",
             blankJ                    : "com.blankj:utilcodex:1.30.6",
             flycoTabLayout            : "io.github.h07000223:flycoTabLayout:3.0.0",
-            lifeeventbus              : "com.jeremyliao:live-event-bus-x:1.7.3",
+            lifeeventbus              : "io.github.jeremyliao:live-event-bus-x:1.8.0",
             localization              : "com.akexorcist:localization:1.2.10",
             coil                      : "io.coil-kt:coil:1.4.0",
             permission                : "com.guolindev.permissionx:permissionx:1.6.1",
