@@ -18,6 +18,7 @@ import com.jeremyliao.liveeventbus.LiveEventBus
 import com.jiayang.quickandroid.R
 import com.jiayang.quickandroid.base.BaseActivity
 import com.jiayang.quickandroid.base.BaseFragmentPagerAdapter
+import com.jiayang.quickandroid.base.initUIStateObserver
 import com.jiayang.quickandroid.databinding.ActivityMainBinding
 import com.jiayang.quickandroid.entity.TabEntity
 import com.jiayang.quickandroid.ui.login.LoginActivity
@@ -67,7 +68,8 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
     @RequiresApi(Build.VERSION_CODES.O)
     @SuppressLint("CheckResult")
     override fun initActivity(savedInstanceState: Bundle?) {
-
+        // 使用 flow
+//        initUIStateObserver(mMainViewModel)
 
         mBindingView.apply {
             viewPager.apply {

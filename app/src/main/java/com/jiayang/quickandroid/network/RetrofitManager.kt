@@ -4,6 +4,7 @@ import com.jiayang.quickandroid.network.ApiService
 import com.jiayang.quickandroid.network.CommonHeaderInterceptor
 import com.jiayang.quickandroid.network.TokenInterceptor
 import com.jiayang.quickandroid.BuildConfig
+import com.jiayang.quickandroid.base.genderMoshiBuild
 import com.jiayang.quickandroid.network.HttpHeaders
 import com.jiayang.quickandroid.utils.HttpsUtils
 import okhttp3.OkHttpClient
@@ -26,8 +27,7 @@ object RetrofitManager {
 
     private val retrofit =Retrofit.Builder()
         .baseUrl(BASE_URL)
-        .addConverterFactory(GsonConverterFactory.create())
-        .addConverterFactory(MoshiConverterFactory.create())
+        .addConverterFactory(MoshiConverterFactory.create(genderMoshiBuild()))
         .client(genericOkClient())
         .build()
 
