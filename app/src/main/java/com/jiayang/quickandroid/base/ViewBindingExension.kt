@@ -1,8 +1,12 @@
-package com.iappsasia.industry_android.base
+package com.jiayang.quickandroid.base
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.lifecycle.lifecycleScope
 import androidx.viewbinding.ViewBinding
+import com.blankj.utilcode.util.ToastUtils
+import com.jiayang.quickandroid.entity.UIState
+import kotlinx.coroutines.flow.collect
 import java.lang.reflect.ParameterizedType
 
 /**
@@ -53,5 +57,60 @@ fun <T : Any, VB : ViewBinding> T.createViewBindingForAdapter(
             Boolean::class.java
         )
         return method.invoke(null, layoutInflater, layoutId,container, false) as VB
+    }
+}
+
+fun BaseActivity<*>.initUIStateObserver(viewModel : BaseViewModel){
+    lifecycleScope.launchWhenCreated {
+        viewModel.uiStateFlow.collect {
+            when (it) {
+                is UIState.LoadingAni -> {
+                    if (it.isShow) {
+//                        showLoading()
+                    } else {
+//                        dismissLoading()
+                    }
+                }
+                is UIState.ShowMessage ->{
+                    ToastUtils.showLong(it.message)
+                }
+            }
+        }
+    }
+}
+fun BaseFragment<*>.initUIStateObserver(viewModel : BaseViewModel){
+    lifecycleScope.launchWhenCreated {
+        viewModel.uiStateFlow.collect {
+            when (it) {
+                is UIState.LoadingAni -> {
+                    if (it.isShow) {
+//                        showLoading()
+                    } else {
+//                        dismissLoading()
+                    }
+                }
+                is UIState.ShowMessage ->{
+                    ToastUtils.showLong(it.message)
+                }
+            }
+        }
+    }
+}
+fun BaseLazyFragment<*>.initUIStateObserver(viewModel : BaseViewModel){
+    lifecycleScope.launchWhenCreated {
+        viewModel.uiStateFlow.collect {
+            when (it) {
+                is UIState.LoadingAni -> {
+                    if (it.isShow) {
+//                        showLoading()
+                    } else {
+//                        dismissLoading()
+                    }
+                }
+                is UIState.ShowMessage ->{
+                    ToastUtils.showLong(it.message)
+                }
+            }
+        }
     }
 }

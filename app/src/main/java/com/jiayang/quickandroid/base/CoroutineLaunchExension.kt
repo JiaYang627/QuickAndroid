@@ -1,6 +1,9 @@
 package com.iappsasia.industry_android.base
 
+import com.jiayang.quickandroid.network.StatefulCoroutine
 import kotlinx.coroutines.*
+import kotlin.coroutines.CoroutineContext
+import kotlin.coroutines.EmptyCoroutineContext
 
 /**
  * @author ：张 奎
@@ -37,6 +40,18 @@ fun CoroutineScope.delayLaunch(timeMills: Long, init: CoroutineCallback.() -> Un
         delay(timeMills)
         callback.block()
     }
+}
+
+@OptIn(InternalCoroutinesApi::class)
+fun <BaseResultData> CoroutineScope.launchSafety(
+    context: CoroutineContext = EmptyCoroutineContext,
+    start: CoroutineStart = CoroutineStart.DEFAULT,
+    block: suspend CoroutineScope.() -> BaseResultData,
+): StatefulCoroutine<BaseResultData> {
+    val newContext = newCoroutineContext(context)
+    val coroutine = StatefulCoroutine<BaseResultData>(newContext)
+    coroutine.start(start,coroutine,block)
+    return coroutine
 }
 
 

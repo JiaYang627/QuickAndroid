@@ -1,5 +1,6 @@
 package com.jiayang.quickandroid.base
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Gravity
 import android.view.LayoutInflater
@@ -7,7 +8,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.viewbinding.ViewBinding
-import com.iappsasia.industry_android.base.createViewBindingForFragment
 import com.iappsasia.industry_android.widget.ldialog.LDialog
 import com.jiayang.quickandroid.R
 import kotlinx.coroutines.CoroutineScope
@@ -72,5 +72,17 @@ abstract class BaseLazyFragment<VB : ViewBinding> : Fragment(), CoroutineScope b
         mBinding = null
         mCurrentIsLoad = false
         mLoadingDialog = null
+    }
+
+    fun startActivity(
+        clazz: Class<*>,
+        mBundle: Bundle.() -> Unit = {}
+    ) {
+
+        val intent = Intent(activity, clazz).apply {
+            val bundle = Bundle().apply(mBundle)
+            putExtras(bundle)
+        }
+        this.startActivity(intent)
     }
 }

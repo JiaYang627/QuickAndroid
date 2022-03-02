@@ -3,20 +3,24 @@ package com.jiayang.quickandroid.base
 import android.content.Context
 import android.content.Intent
 import android.content.res.Resources
+import android.os.Build
 import android.os.Bundle
 import android.view.Gravity
+import android.view.LayoutInflater
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.viewbinding.ViewBinding
 import cn.jiayang.kotlinstudyjetpack.base.ActivityStackManager
+import coil.ImageLoader
 import com.blankj.utilcode.util.AdaptScreenUtils
 import com.blankj.utilcode.util.BarUtils
 import com.blankj.utilcode.util.LanguageUtils
-import com.iappsasia.industry_android.base.createViewBindingForAct
+import com.bumptech.glide.gifdecoder.GifDecoder
 import com.iappsasia.industry_android.widget.ldialog.LDialog
 import com.jiayang.quickandroid.R
-import dagger.hilt.android.AndroidEntryPoint
+import com.jiayang.quickandroid.databinding.CommonLoadingLayoutBinding
+import com.jiayang.quickandroid.widget.CommonDialog
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.cancel
@@ -31,8 +35,9 @@ abstract class BaseActivity<VB : ViewBinding> : AppCompatActivity(), CoroutineSc
     private var mBinding : VB?= null
     val mBindingView :VB get() = mBinding!!
 
-    private var mLoadingDialog : LDialog? = null
-    val mLoadingView : LDialog get() = mLoadingDialog!!
+
+    private var mCommonDialog: CommonDialog? = null
+    private var mIsFirst = true
 
     override fun attachBaseContext(newBase: Context?) {
         LanguageUtils.attachBaseContext(newBase)
@@ -55,13 +60,35 @@ abstract class BaseActivity<VB : ViewBinding> : AppCompatActivity(), CoroutineSc
         initActivity(savedInstanceState)
         ActivityStackManager.addCurrentAct(this)
     }
+    override fun onResume() {
+        super.onResume()
+        if (mIsFirst) {
+            onOnceToApi()
+            mIsFirst = false
+        }
+    }
+
+    open fun onOnceToApi() {}
 
     private fun onInitLoadDialogView() {
-        mLoadingDialog = LDialog.init(supportFragmentManager)
-            .setLayoutRes(R.layout.common_loading_layout)
-            .setGravity(Gravity.CENTER)
-            .setWidthScale(0.55f)
-            .setCancelableOutside(false)
+        mCommonDialog = CommonDialog(this).apply {
+            setContentView(
+                CommonLoadingLayoutBinding.inflate(
+                    LayoutInflater.from(this@BaseActivity)
+                ).apply {
+                    // 使用coil 加载 gif ，记得添加coil gif 的依赖
+//                    val imageLoader = ImageLoader.Builder(this@BaseActivity).componentRegistry {
+//                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+//                            add(ImageDecoderDecoder(this@BaseActivity))
+//                        } else {
+//                            add(GifDecoder())
+//                        }
+//                    }
+//                        .build()
+//                    loadingImg.load(R.drawable.icon_loading,imageLoader)
+                }.root
+            )
+        }
     }
 
     abstract fun initActivity(savedInstanceState: Bundle?)
@@ -72,7 +99,7 @@ abstract class BaseActivity<VB : ViewBinding> : AppCompatActivity(), CoroutineSc
         ActivityStackManager.removeActivity(this)
         cancel()
         mBinding = null
-        mLoadingDialog = null
+        mCommonDialog = null
     }
 
     inline fun<reified T :ViewModel> setViewModel(block :() -> ViewModelProvider.NewInstanceFactory) :T{
@@ -84,17 +111,25 @@ abstract class BaseActivity<VB : ViewBinding> : AppCompatActivity(), CoroutineSc
     fun startActivity(
         clazz: Class<*>,
         mCurrentFinish: Boolean? = false,
-        mBundle: Bundle? = null
+        mBundle: Bundle.() -> Unit = {}
     ) {
 
-        val intent = Intent(this, clazz)
-        if (mBundle != null) {
-            intent.putExtras(mBundle)
+        val intent = Intent(this, clazz).apply {
+            val bundle = Bundle().apply(mBundle)
+            putExtras(bundle)
         }
         this.startActivity(intent)
         if (mCurrentFinish!!) {
             finish()
         }
+    }
+
+    fun showLoading() {
+        mCommonDialog?.show()
+    }
+
+    fun dismissLoading() {
+        mCommonDialog?.dismissDialog()
     }
 
 
