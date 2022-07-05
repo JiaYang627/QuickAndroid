@@ -31,6 +31,9 @@
 #### Template 的使用
 项目对应的一键生成页面插件,项目地址 [TinMVVM](https://github.com/JiaYang627/TinMVVM),编译好的插件在此项目 `template`文件夹下,导入AS插件即可使用
 
+AndroidStudio Chipmunk 2021.2.1 版本 选择 'TinMVVM-1.1.0.jar'
+AndroidStudio Arctic Fox | 2020.3.1 版本以及以下版本 选择 'TinMVVM-1.0.75.jar'
+
 说几点使用事项
 * 点击`app` 或者 包名 右键 - New - other
 * 使用的时候 `Generate Activity` 默认为勾选状态，如果不想生成Act ，需要先去掉 `Generate Activity` 的勾选，
